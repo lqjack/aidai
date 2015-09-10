@@ -28,11 +28,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.ibatis</groupId>
-			<artifactId>com.springsource.com.ibatis</artifactId>
+			<artifactId>ibatis-sqlmap</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.orm</artifactId>
+			<artifactId>spring-orm</artifactId>
 		</dependency>
 		
 		<!-- project dependecies -->

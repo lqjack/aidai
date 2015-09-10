@@ -9,8 +9,8 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
 import org.springframework.util.Assert;
@@ -29,7 +29,7 @@ import framework.generic.dao.Page;
 
 @SuppressWarnings("deprecation")
 public abstract class AbstractIbatisDao<T, F> extends SqlMapClientDaoSupport {
-	private static Log log = LogFactory.getLog(AbstractIbatisDao.class);
+	private static Logger log = LoggerFactory.getLogger(AbstractIbatisDao.class);
 	public static final String PRE = "T_";
 	public static final String SEPRATE = ".";
 	public static final String POSTFIX_INSERT = ".insert";
@@ -67,7 +67,7 @@ public abstract class AbstractIbatisDao<T, F> extends SqlMapClientDaoSupport {
 		try{
 			return GenericsUtils.getGenerateParamClass(this.getClass(), i);
 		}catch(Exception e){
-			log.error(e);
+			log.error(e.getMessage());
 		}
 		return null;
 	}

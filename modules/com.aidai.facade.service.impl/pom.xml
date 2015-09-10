@@ -17,7 +17,7 @@
 
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.transaction</artifactId>
+			<artifactId>spring-tx</artifactId>
 		</dependency>
 
 		<!-- project dependenies -->
