@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>com.aidai.parent</artifactId>
+		<groupId>com.aidai</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>com.aidai.modules</artifactId>
+	<packaging>pom</packaging>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.4</version>
+				<configuration>
+					<Import-Package>*</Import-Package>
+					<supportedProjectTypes>
+						<supportedProjectType>jar</supportedProjectType>
+						<supportedProjectType>bundle</supportedProjectType>
+						<supportedProjectType>war</supportedProjectType>
+					</supportedProjectTypes>
+				</configuration>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestFile>
+							src/main/resources/META-INF/MANIFEST.MF
+						</manifestFile>
+						<manifestEntries>
+							<Implementation-Vendor>爱贷网</Implementation-Vendor>
+							<Specification-Vendor>爱贷网</Specification-Vendor>
+							<url>${project.url}</url>
+							<Built-Version>${project.version}</Built-Version>
+							<Built-Time>${maven.build.timestamp}</Built-Time>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.nop</artifactId>
+		</dependency>
+	</dependencies>
+
+	<modules>
+		<module>com.aidai.utils</module>
+		<module>com.aidai.model</module>
+		<module>com.aidai.model.impl</module>
+		<module>com.aidai.mysql.datasource</module>
+		<module>com.aidai.dao</module>
+		<module>com.aidai.dao.impl</module>
+		<module>com.aidai.facade.service.api</module>
+		<module>com.aidai.facade.service.impl</module>
+		<module>com.aidai.service</module>
+		<module>com.aidai.service.impl</module>
+		<module>com.aidai.controller</module>
+		<module>com.aidai.web</module>
+		<!-- <module>com.aidai.test</module> -->
+		<!-- <module>com.aidai.client</module> -->
+	</modules>
+</project>

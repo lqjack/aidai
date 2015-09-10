@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+		   xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.0.0"
+           xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.0.0"
+ 		   default-activation="lazy" >
+
+	<!-- <bean id="ibatisGenericDao" class="framework.generic.dao.impl.BatisGenericDao"
+		init-method="startUp">
+	</bean>
+
+	<service ref="ibatisGenericDao" interface="framework.generic.dao.IbatisGenericDao" /> -->
+
+	  <bean id="tradeServicesManagerBean" class="org.apache.aries.samples.ariestrader.core.TradeServicesManagerImpl" init-method="init">
+	  </bean>
+	
+	  <service id="TradeServicesManager" ref="tradeServicesManagerBean" interface="org.apache.aries.samples.ariestrader.api.TradeServicesManager"/>
+	
+	  <bean id="tradeDBManagerBean" class="org.apache.aries.samples.ariestrader.core.TradeDBManagerImpl" init-method="init">
+	  </bean>
+	
+	  <service id="TradeDBManager" ref="tradeDBManagerBean" interface="org.apache.aries.samples.ariestrader.api.TradeDBManager">
+	  </service>
+	
+	  <reference-list id="tradeServicesList" availability="optional" activation="eager" interface="org.apache.aries.samples.ariestrader.api.TradeServices">
+	      <reference-listener ref="tradeServicesManagerBean" bind-method="bindService" unbind-method="unbindService" />
+	  </reference-list>
+	  
+	  <bean id="tradeServicesBeanJPA-CM" class="org.apache.aries.samples.ariestrader.persist.jpa.cm.TradeJpaCm" init-method="init"> 
+      <jpa:context property="entityManager" unitname="ariestrader-cm" />
+      <tx:transaction method="*" value="Required"/>
+  </bean>
+  
+  <service id="tradeServicesJPA-CM" ref="tradeServicesBeanJPA-CM" interface="org.apache.aries.samples.ariestrader.api.TradeServices">
+      <service-properties>
+          <entry key="mode" value="JPA_CM"/>
+      </service-properties>
+  </service>
+</blueprint>
