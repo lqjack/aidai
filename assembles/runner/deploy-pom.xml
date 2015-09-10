@@ -28,7 +28,7 @@
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
     <aidai.osgi.export>!*.impl;com.aidai.assembles*;-noimport:=true</aidai.osgi.export>
     <struts2.version>2.3.16.3</struts2.version>
-    <timestamp>2015-09-10 15:43:49</timestamp>
+    <timestamp>2015-09-10 18:02:25</timestamp>
     <aidai.osgi.import.additional></aidai.osgi.import.additional>
     <common.dbcp.version>1.2.2.osgi</common.dbcp.version>
     <springsource.slf4j.version>1.6.1</springsource.slf4j.version>
@@ -68,6 +68,7 @@
     <gpg.useagent>true</gpg.useagent>
     <project.deploy.dir>target/aidai/deploy</project.deploy.dir>
     <exam.version>4.5.0</exam.version>
+    <javaxServletVersion>1.2</javaxServletVersion>
     <aidai.osgi.import.default.version>[$(version;==;$(@)),$(version;+;$(@)))</aidai.osgi.import.default.version>
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <aidai.osgi.split.pkg>-split-package:=first</aidai.osgi.split.pkg>
@@ -75,6 +76,21 @@
   </properties>
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+      </dependency>
+      <dependency>
+        <groupId>taglibs</groupId>
+        <artifactId>standard</artifactId>
+        <version>1.1.2</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.5</version>
+      </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -192,11 +208,6 @@
         <groupId>org.apache.geronimo.specs</groupId>
         <artifactId>geronimo-jpa_2.0_spec</artifactId>
         <version>${geronimoJpaSpecVersion}</version>
-      </dependency>
-      <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>jstl</artifactId>
-        <version>${javaxServletVersion}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.derby</groupId>
@@ -590,6 +601,108 @@
     </dependencies>
   </dependencyManagement>
   <dependencies>
+    <dependency>
+      <groupId>org.aopalliance</groupId>
+      <artifactId>com.springsource.org.aopalliance</artifactId>
+      <version>1.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.gemini</groupId>
+      <artifactId>org.eclipse.gemini.blueprint.core</artifactId>
+      <version>1.0.2.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.gemini</groupId>
+      <artifactId>org.eclipse.gemini.blueprint.extender</artifactId>
+      <version>1.0.2.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.gemini</groupId>
+      <artifactId>org.eclipse.gemini.blueprint.io</artifactId>
+      <version>1.0.2.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.derby</groupId>
+      <artifactId>derby</artifactId>
+      <version>10.10.2.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.beans</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mchange.c3p0</groupId>
+      <artifactId>com.springsource.com.mchange.v2.c3p0</artifactId>
+      <version>0.9.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>com.springsource.org.apache.commons.logging</artifactId>
+      <version>1.1.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.core</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.web</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.transaction</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.orm</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.jdbc</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.web.servlet</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.context</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>org.springframework.aop</artifactId>
+      <version>3.2.3.RELEASE</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.cglib</groupId>
+      <artifactId>com.springsource.net.sf.cglib</artifactId>
+      <version>2.1.3</version>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>com.aidai</groupId>
       <artifactId>com.aidai.utils</artifactId>

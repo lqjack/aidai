@@ -11,27 +11,11 @@
 	<name>系统构建工具</name>
 	<build>
 		<plugins>
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>bin</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<appendAssemblyId>false</appendAssemblyId>
-							<finalName>bin</finalName>
-							<attach>false</attach>
-							<descriptors>
-								<descriptor>aidai-assembly.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin> -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+				<executions> <execution> <id>bin</id> <phase>package</phase> <goals> <goal>single</goal> 
+				</goals> <configuration> <appendAssemblyId>false</appendAssemblyId> <finalName>bin</finalName> 
+				<attach>false</attach> <descriptors> <descriptor>aidai-assembly.xml</descriptor> 
+				</descriptors> </configuration> </execution> </executions> </plugin> -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -49,7 +33,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -67,68 +51,159 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 
-	 <dependencies>
-		<!-- project dependencies --> 
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.utils</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.model</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.model.impl</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.facade.service.api</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.facade.service.impl</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.mysql.datasource</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.dao</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.dao.impl</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.service</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.service.impl</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.controller</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.web</artifactId>
-			</dependency>
-			<!-- <dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.test</artifactId>
+	<dependencies>
+		<dependency>  
+            <groupId>javax.servlet</groupId>  
+            <artifactId>servlet-api</artifactId>  
+        </dependency>  
+		<dependency>
+			<groupId>org.aopalliance</groupId>
+			<artifactId>com.springsource.org.aopalliance</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.extender</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.10.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.beans</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.mchange.c3p0</groupId>
+			<artifactId>com.springsource.com.mchange.v2.c3p0</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.logging</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm-commons</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.core</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.web</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.transaction</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.orm</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.jdbc</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.web.servlet</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.context</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.aop</artifactId>
+
+		</dependency>
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>org.springframework.expression</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework</groupId> <artifactId>org.springframework.test</artifactId> 
 			</dependency> -->
-			<!-- <dependency>
-				<groupId>com.aidai</groupId>
-				<artifactId>com.aidai.client</artifactId>
+		<dependency>
+			<groupId>net.sourceforge.cglib</groupId>
+			<artifactId>com.springsource.net.sf.cglib</artifactId>
+			<version>2.1.3</version>
+		</dependency>
+
+		<!-- project dependencies -->
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.utils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.model.impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.facade.service.api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.facade.service.impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.mysql.datasource</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.dao</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.dao.impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.service.impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.controller</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.web</artifactId>
+		</dependency>
+		<!-- <dependency> <groupId>com.aidai</groupId> <artifactId>com.aidai.test</artifactId> 
 			</dependency> -->
-			<!-- project dependecies end -->
-	 </dependencies>
+		<!-- <dependency> <groupId>com.aidai</groupId> <artifactId>com.aidai.client</artifactId> 
+			</dependency> -->
+		<!-- project dependecies end -->
+	</dependencies>
 </project>
