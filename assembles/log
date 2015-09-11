@@ -1,0 +1,152 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.aidai:com.aidai.assembles:pom:1.0.0
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: javax.servlet:jstl:jar -> version 1.2 vs ${javaxServletVersion} @ com.aidai:com.aidai.parent:1.0.0, F:\worspace\git\aidai\pom.xml, line 233, column 16
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building 系统构建工具 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-pax-plugin:1.4:provision (default-cli) @ com.aidai.assembles ---
+[WARNING] Skipping non-bundle artifact javax.servlet:servlet-api:jar:2.5:provided
+[WARNING] Skipping non-bundle artifact javax.servlet:jstl:jar:1.2:compile
+[WARNING] Skipping non-bundle artifact taglibs:standard:jar:1.1.2:compile
+[WARNING] Skipping non-bundle artifact asm:asm-commons:jar:2.2.3:compile
+[WARNING] Skipping non-bundle artifact asm:asm:jar:2.2.3:compile
+[WARNING] Skipping non-bundle artifact org.springframework:spring-context-support:jar:3.2.3.RELEASE:compile
+[INFO] Installing F:\worspace\git\aidai\assembles\runner\deploy-pom.xml to f:\m2\com\aidai\assembles\build\deployment\1.0.0\deployment-1.0.0.pom
+__________                 __________                                 
+\______   \_____  ___  ___ \______   \__ __  ____   ____   ___________
+|     ___/\__  \ \  \/  /  |       _/  |  \/    \ /    \_/ __ \_  __ \
+|    |     / __ \_>    <   |    |   \  |  /   |  \   |  \  ___/|  | \/
+|____|    (____  /__/\_ \  |____|_  /____/|___|  /___|  /\___  >__|   
+               \/      \/         \/           \/     \/     \/       
+
+Pax Runner (1.8.6) from OPS4J - http://www.ops4j.org
+----------------------------------------------------
+
+ -> Using only arguments from command line
+ -> Scan bundles from [F:\worspace\git\aidai\assembles\runner\deploy-pom.xml]
+ -> Scan bundles from [scan-pom:file:/F:/worspace/git/aidai/assembles/runner/deploy-pom.xml]
+ -> Provision bundle [mvn:javax.servlet/javax.servlet-api/3.0.1, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.aopalliance/com.springsource.org.aopalliance/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.core/1.0.2.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.extender/1.0.2.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.io/1.0.2.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.apache.derby/derby/10.10.2.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.beans/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.mchange.c3p0/com.springsource.com.mchange.v2.c3p0/0.9.1, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.freemarker/freemarker/2.3.20, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.core/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.web/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.transaction/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.orm/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.jdbc/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.web.servlet/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.context/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.aop/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.expression/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:org.springframework/org.springframework.test/3.2.3.RELEASE, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:net.sourceforge.cglib/com.springsource.net.sf.cglib/2.1.3, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.utils/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.model/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.model.impl/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.facade.service.api/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.facade.service.impl/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.mysql.datasource/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.dao/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.dao.impl/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.service/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.service.impl/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.controller/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Provision bundle [mvn:com.aidai/com.aidai.web/1.0.0, at default start level, bundle will be started, bundle will be loaded from the cache]
+ -> Preparing framework [Felix 4.4.1]
+ -> Downloading bundles...
+ -> mvn:javax.servlet/javax.servlet-api/3.0.1 : connecting... -> Repository spec http://repository.springsource.com/maven/bundles/release/ does not contain an identifier. This is deprecated & discouraged & just evil.
+ -> Repository spec http://repository.springsource.com/maven/bundles/external/ does not contain an identifier. This is deprecated & discouraged & just evil.
+ -> Repository spec http://repo.maven.apache.org/maven2/ does not contain an identifier. This is deprecated & discouraged & just evil.
+ -> Repository spec http://repository.ops4j.org/maven2/ does not contain an identifier. This is deprecated & discouraged & just evil.
+ -> Resolved (javax.servlet:javax.servlet-api:jar:3.0.1) as f:\m2\javax\servlet\javax.servlet-api\3.0.1\javax.servlet-api-3.0.1.jar
+ -> mvn:javax.servlet/javax.servlet-api/3.0.1 : 85353 bytes @ [ 85353kBps ]
+ -> mvn:org.aopalliance/com.springsource.org.aopalliance/1.0.0 : connecting... -> Resolved (org.aopalliance:com.springsource.org.aopalliance:jar:1.0.0) as f:\m2\org\aopalliance\com.springsource.org.aopalliance\1.0.0\com.springsource.org.aopalliance-1.0.0.jar
+ -> mvn:org.aopalliance/com.springsource.org.aopalliance/1.0.0 : 4615 bytes @ [ 4615kBps ]
+ -> mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.core/1.0.2.RELEASE : connecting... -> Resolved (org.eclipse.gemini:org.eclipse.gemini.blueprint.core:jar:1.0.2.RELEASE) as f:\m2\org\eclipse\gemini\org.eclipse.gemini.blueprint.core\1.0.2.RELEASE\org.eclipse.gemini.blueprint.core-1.0.2.RELEASE.jar
+ -> mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.core/1.0.2.RELEASE : 577734 bytes @ [ 577734kBps ]
+ -> mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.extender/1.0.2.RELEASE : connecting... -> Resolved (org.eclipse.gemini:org.eclipse.gemini.blueprint.extender:jar:1.0.2.RELEASE) as f:\m2\org\eclipse\gemini\org.eclipse.gemini.blueprint.extender\1.0.2.RELEASE\org.eclipse.gemini.blueprint.extender-1.0.2.RELEASE.jar
+ -> mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.extender/1.0.2.RELEASE : 173216 bytes @ [ 173216kBps ]
+ -> mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.io/1.0.2.RELEASE : connecting... -> Resolved (org.eclipse.gemini:org.eclipse.gemini.blueprint.io:jar:1.0.2.RELEASE) as f:\m2\org\eclipse\gemini\org.eclipse.gemini.blueprint.io\1.0.2.RELEASE\org.eclipse.gemini.blueprint.io-1.0.2.RELEASE.jar
+ -> mvn:org.eclipse.gemini/org.eclipse.gemini.blueprint.io/1.0.2.RELEASE : 32065 bytes @ [ 32065kBps ]
+ -> mvn:org.apache.derby/derby/10.10.2.0 : connecting... -> Resolved (org.apache.derby:derby:jar:10.10.2.0) as f:\m2\org\apache\derby\derby\10.10.2.0\derby-10.10.2.0.jar
+ -> mvn:org.apache.derby/derby/10.10.2.0 : 2838580 bytes @ [ 2838580kBps ]
+ -> mvn:org.springframework/org.springframework.beans/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.beans:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.beans\3.2.3.RELEASE\org.springframework.beans-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.beans/3.2.3.RELEASE : 614614 bytes @ [ 614614kBps ]
+ -> mvn:com.mchange.c3p0/com.springsource.com.mchange.v2.c3p0/0.9.1 : connecting... -> Resolved (com.mchange.c3p0:com.springsource.com.mchange.v2.c3p0:jar:0.9.1) as f:\m2\com\mchange\c3p0\com.springsource.com.mchange.v2.c3p0\0.9.1\com.springsource.com.mchange.v2.c3p0-0.9.1.jar
+ -> mvn:com.mchange.c3p0/com.springsource.com.mchange.v2.c3p0/0.9.1 : 615220 bytes @ [ 615220kBps ]
+ -> mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1 : connecting... -> Resolved (org.apache.commons:com.springsource.org.apache.commons.logging:jar:1.1.1) as f:\m2\org\apache\commons\com.springsource.org.apache.commons.logging\1.1.1\com.springsource.org.apache.commons.logging-1.1.1.jar
+ -> mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1 : 61464 bytes @ [ 61464kBps ]
+ -> mvn:org.freemarker/freemarker/2.3.20 : connecting... -> Resolved (org.freemarker:freemarker:jar:2.3.20) as f:\m2\org\freemarker\freemarker\2.3.20\freemarker-2.3.20.jar
+ -> mvn:org.freemarker/freemarker/2.3.20 : 1018549 bytes @ [ 1018549kBps ]
+ -> mvn:org.springframework/org.springframework.core/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.core:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.core\3.2.3.RELEASE\org.springframework.core-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.core/3.2.3.RELEASE : 879219 bytes @ [ 879219kBps ]
+ -> mvn:org.springframework/org.springframework.web/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.web:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.web\3.2.3.RELEASE\org.springframework.web-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.web/3.2.3.RELEASE : 635352 bytes @ [ 635352kBps ]
+ -> mvn:org.springframework/org.springframework.transaction/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.transaction:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.transaction\3.2.3.RELEASE\org.springframework.transaction-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.transaction/3.2.3.RELEASE : 246823 bytes @ [ 246823kBps ]
+ -> mvn:org.springframework/org.springframework.orm/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.orm:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.orm\3.2.3.RELEASE\org.springframework.orm-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.orm/3.2.3.RELEASE : 393590 bytes @ [ 393590kBps ]
+ -> mvn:org.springframework/org.springframework.jdbc/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.jdbc:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.jdbc\3.2.3.RELEASE\org.springframework.jdbc-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.jdbc/3.2.3.RELEASE : 411188 bytes @ [ 411188kBps ]
+ -> mvn:org.springframework/org.springframework.web.servlet/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.web.servlet:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.web.servlet\3.2.3.RELEASE\org.springframework.web.servlet-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.web.servlet/3.2.3.RELEASE : 645611 bytes @ [ 645611kBps ]
+ -> mvn:org.springframework/org.springframework.context/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.context:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.context\3.2.3.RELEASE\org.springframework.context-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.context/3.2.3.RELEASE : 876523 bytes @ [ 876523kBps ]
+ -> mvn:org.springframework/org.springframework.aop/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.aop:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.aop\3.2.3.RELEASE\org.springframework.aop-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.aop/3.2.3.RELEASE : 340756 bytes @ [ 340756kBps ]
+ -> mvn:org.springframework/org.springframework.expression/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.expression:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.expression\3.2.3.RELEASE\org.springframework.expression-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.expression/3.2.3.RELEASE : 197954 bytes @ [ 197954kBps ]
+ -> mvn:org.springframework/org.springframework.test/3.2.3.RELEASE : connecting... -> Resolved (org.springframework:org.springframework.test:jar:3.2.3.RELEASE) as f:\m2\org\springframework\org.springframework.test\3.2.3.RELEASE\org.springframework.test-3.2.3.RELEASE.jar
+ -> mvn:org.springframework/org.springframework.test/3.2.3.RELEASE : 463735 bytes @ [ 463735kBps ]
+ -> mvn:net.sourceforge.cglib/com.springsource.net.sf.cglib/2.1.3 : connecting... -> Resolved (net.sourceforge.cglib:com.springsource.net.sf.cglib:jar:2.1.3) as f:\m2\net\sourceforge\cglib\com.springsource.net.sf.cglib\2.1.3\com.springsource.net.sf.cglib-2.1.3.jar
+ -> mvn:net.sourceforge.cglib/com.springsource.net.sf.cglib/2.1.3 : 328931 bytes @ [ 328931kBps ]
+ -> mvn:com.aidai/com.aidai.utils/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.utils:jar:1.0.0) as f:\m2\com\aidai\com.aidai.utils\1.0.0\com.aidai.utils-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.utils/1.0.0 : 52662 bytes @ [ 52662kBps ]
+ -> mvn:com.aidai/com.aidai.model/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.model:jar:1.0.0) as f:\m2\com\aidai\com.aidai.model\1.0.0\com.aidai.model-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.model/1.0.0 : 37472 bytes @ [ 37472kBps ]
+ -> mvn:com.aidai/com.aidai.model.impl/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.model.impl:jar:1.0.0) as f:\m2\com\aidai\com.aidai.model.impl\1.0.0\com.aidai.model.impl-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.model.impl/1.0.0 : 20745 bytes @ [ 20745kBps ]
+ -> mvn:com.aidai/com.aidai.facade.service.api/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.facade.service.api:jar:1.0.0) as f:\m2\com\aidai\com.aidai.facade.service.api\1.0.0\com.aidai.facade.service.api-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.facade.service.api/1.0.0 : 3573 bytes @ [ 3573kBps ]
+ -> mvn:com.aidai/com.aidai.facade.service.impl/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.facade.service.impl:jar:1.0.0) as f:\m2\com\aidai\com.aidai.facade.service.impl\1.0.0\com.aidai.facade.service.impl-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.facade.service.impl/1.0.0 : 4374 bytes @ [ 4374kBps ]
+ -> mvn:com.aidai/com.aidai.mysql.datasource/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.mysql.datasource:jar:1.0.0) as f:\m2\com\aidai\com.aidai.mysql.datasource\1.0.0\com.aidai.mysql.datasource-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.mysql.datasource/1.0.0 : 4514 bytes @ [ 4514kBps ]
+ -> mvn:com.aidai/com.aidai.dao/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.dao:jar:1.0.0) as f:\m2\com\aidai\com.aidai.dao\1.0.0\com.aidai.dao-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.dao/1.0.0 : 10243 bytes @ [ 10243kBps ]
+ -> mvn:com.aidai/com.aidai.dao.impl/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.dao.impl:jar:1.0.0) as f:\m2\com\aidai\com.aidai.dao.impl\1.0.0\com.aidai.dao.impl-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.dao.impl/1.0.0 : 6121 bytes @ [ 6121kBps ]
+ -> mvn:com.aidai/com.aidai.service/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.service:jar:1.0.0) as f:\m2\com\aidai\com.aidai.service\1.0.0\com.aidai.service-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.service/1.0.0 : 4248 bytes @ [ 4248kBps ]
+ -> mvn:com.aidai/com.aidai.service.impl/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.service.impl:jar:1.0.0) as f:\m2\com\aidai\com.aidai.service.impl\1.0.0\com.aidai.service.impl-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.service.impl/1.0.0 : 2731 bytes @ [ 2731kBps ]
+ -> mvn:com.aidai/com.aidai.controller/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.controller:jar:1.0.0) as f:\m2\com\aidai\com.aidai.controller\1.0.0\com.aidai.controller-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.controller/1.0.0 : 19221 bytes @ [ 19221kBps ]
+ -> mvn:com.aidai/com.aidai.web/1.0.0 : connecting... -> Resolved (com.aidai:com.aidai.web:jar:1.0.0) as f:\m2\com\aidai\com.aidai.web\1.0.0\com.aidai.web-1.0.0.jar
+ -> mvn:com.aidai/com.aidai.web/1.0.0 : 483850 bytes @ [ 483850kBps ]
+ -> Using execution environment [J2SE-1.7]
+ -> Runner has successfully finished his job!
+
+
+ -> Platform has been shutdown.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.961s
+[INFO] Finished at: Fri Sep 11 09:46:53 CST 2015
+[INFO] Final Memory: 7M/20M
+[INFO] ------------------------------------------------------------------------
