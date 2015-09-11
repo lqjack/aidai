@@ -22,18 +22,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>com.springsource.org.apache.commons.lang</artifactId>
 		</dependency>
@@ -42,6 +30,15 @@
 			<artifactId>com.springsource.javax.servlet</artifactId>
 		</dependency>
 		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+		</dependency>
+		
+		<!-- <dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>com.springsource.javax.servlet.jsp</artifactId>
 		</dependency>
@@ -56,7 +53,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.web.servlet</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-json-plugin</artifactId>
