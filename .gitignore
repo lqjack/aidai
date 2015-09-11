@@ -22,3 +22,6 @@ tmp/**/*
 .classpath
 .settings/**
 tartget/**
+*log*
+*runner*
+runner/

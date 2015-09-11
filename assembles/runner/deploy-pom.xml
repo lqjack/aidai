@@ -25,7 +25,7 @@
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
     <aidai.osgi.export>!*.impl;com.aidai.assembles*;-noimport:=true</aidai.osgi.export>
     <struts2.version>2.2.1</struts2.version>
-    <timestamp>2015-09-10 17:04:57</timestamp>
+    <timestamp>2015-09-11 10:16:42</timestamp>
     <aidai.osgi.import.additional></aidai.osgi.import.additional>
     <url.version>2.2.0</url.version>
     <project.aidai.version>1.0.0</project.aidai.version>
@@ -503,7 +503,7 @@
       </snapshots>
       <id>central</id>
       <name>Central Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
+      <url>http://repo.maven.apache.org/maven2</url>
     </repository>
   </repositories>
 </project>
