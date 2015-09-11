@@ -54,4 +54,6 @@
 		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
 		<constructor-arg index="0" ref="dataSource" />
 	</bean>
+	
+	<bean id="baseDao" class="framework.generic.dao.impl.BaseDaoImpl"></bean>
 </beans>

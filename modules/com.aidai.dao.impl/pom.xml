@@ -61,5 +61,20 @@
 			<artifactId>com.aidai.mysql.datasource</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- <dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.extender</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.io</artifactId>
+		</dependency> -->
 	</dependencies>
 </project>
