@@ -24,7 +24,6 @@
 
 		<javaxServletVersion>1.2</javaxServletVersion>
 
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
 		<gpg.useagent>true</gpg.useagent>
@@ -39,8 +38,6 @@
 		<struts2-json-plugin.version>2.2.1.1</struts2-json-plugin.version>
 
 		<struts2.version>2.3.16.3</struts2.version>
-		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
-		<timestamp>${maven.build.timestamp}</timestamp>
 		<project.deploy.dir>target/aidai/deploy</project.deploy.dir>
 
 		<exam.version>4.5.0</exam.version>
