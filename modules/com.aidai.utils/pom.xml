@@ -37,7 +37,6 @@
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-json-plugin</artifactId>
 		</dependency>
-
 	</dependencies>
 </project>
 

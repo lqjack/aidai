@@ -13,9 +13,9 @@
 	<name>对外服务API</name>
 	
 	<properties>
-        <aries.osgi.export.pkg>
+        <aidai.osgi.export.pkg>
             com.aidai.facade.service.api
-        </aries.osgi.export.pkg>
+        </aidai.osgi.export.pkg>
     </properties>
 
 	<dependencies>
@@ -45,22 +45,6 @@
 		
 	</dependencies>
 	
-	<build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Export-Package>
-                            com.aidai.facade.service.api
-                        </Export-Package>
-                    </instructions>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
 
 
