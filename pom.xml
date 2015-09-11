@@ -21,7 +21,7 @@
 		<project.target.encoding>UTF-8</project.target.encoding>
 		<project.target.version>1.6</project.target.version>
 		<project.aidai.version>1.0.0</project.aidai.version>
-
+		<derbyVersion>10.10.2.0</derbyVersion>
 		<javaxServletVersion>1.2</javaxServletVersion>
 
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -91,7 +91,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>jstl</artifactId>
@@ -499,11 +498,11 @@
 				<artifactId>org.springframework.test</artifactId>
 				<version>${springframework.version}</version>
 			</dependency>
-			<dependency>
+			<!-- <dependency>
 			    <groupId>org.springframework</groupId>
 			    <artifactId>spring-context-support</artifactId>
 			    <version>${springframework.version}</version>
-			</dependency>
+			</dependency> -->
 			<dependency>
 				<groupId>org.freemarker</groupId>
 				<artifactId>freemarker</artifactId>

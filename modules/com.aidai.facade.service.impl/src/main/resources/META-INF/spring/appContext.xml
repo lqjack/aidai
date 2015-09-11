@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="osgi.demo.service" />
+	<context:component-scan base-package="com.aidai.facade.service.impl" />
 	
 	<!--proxy-target-class="true"强制使用cglib代理 如果为false则spring会自动选择 -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
@@ -34,12 +34,11 @@
 			<tx:method name="delete*" propagation="REQUIRED" />
 			<tx:method name="update*" propagation="REQUIRED" />
 			<tx:method name="*" propagation="REQUIRED" />
-
 		</tx:attributes>
 	</tx:advice>
 
-	<aop:config>
+	<!-- <aop:config>
 		<aop:pointcut id="allManagerMethod" expression="execution(* com..service.*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="allManagerMethod" />
-	</aop:config>
+	</aop:config> -->
 </beans>

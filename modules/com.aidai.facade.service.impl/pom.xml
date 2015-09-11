@@ -12,15 +12,28 @@
 	<packaging>bundle</packaging>
 
 	<name>对外服务实现类</name>
+	
+	<properties>
+		<aidai.osgi.export.pkg>
+			!com.aidai.facade.service.impl.*
+		</aidai.osgi.export.pkg>
+		<aidai.osgi.import>
+			framework.generic.dao;provide:=true,*
+		</aidai.osgi.import>
+		<aidai.osgi.private.pkg>
+			com.aidai.facade.service.impl.*
+		</aidai.osgi.private.pkg>
+	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.transaction</artifactId>
 		</dependency>
-
-		<!-- project dependenies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.jdbc</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.model</artifactId>
@@ -42,23 +55,4 @@
 			<artifactId>com.aidai.facade.service.api</artifactId>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin
-                </artifactId>
-				<configuration>
-					<instructions>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Import-Package>
-							framework.generic.dao;provide:=true,
-							*
-						</Import-Package>
-					</instructions>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>

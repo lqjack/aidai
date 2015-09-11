@@ -12,7 +12,6 @@
 	<packaging>pom</packaging>
 
 	<build>
-
 		<plugins>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
@@ -73,7 +72,6 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>com.springsource.slf4j.nop</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.mchange.c3p0</groupId>
 			<artifactId>com.springsource.com.mchange.v2.c3p0</artifactId>
