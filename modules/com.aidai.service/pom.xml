@@ -14,9 +14,9 @@
 	<name>內部使用服务及其实现</name>
 	
 	<properties>
-        <aries.osgi.export.pkg>
+        <aidai.osgi.export.pkg>
             frame.service
-        </aries.osgi.export.pkg>
+        </aidai.osgi.export.pkg>
     </properties>
 
 	<dependencies>

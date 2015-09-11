@@ -32,7 +32,7 @@
 		</dependency>
 	</dependencies>
 	
-	<build>
+	<!-- <build>
     	<plugins>
     		<plugin>
                 <groupId>org.apache.felix</groupId>
@@ -44,16 +44,12 @@
                             frame.model.impl
                         </Export-Package>
                         <Import-Package>
-                            frame.model;provide:=true,
-                            org.apache.openjpa.enhance;version="[1.0.0,2.1.0)",
-                            org.apache.openjpa.util;version="[1.0.0,2.1.0)",
-                            javax.persistence;version="[1.0.0,2.1.0)",
-                            *
+                            frame.model;provide:=true,*
                         </Import-Package>
                     </instructions>
                 </configuration>
             </plugin>
     	</plugins>
-    </build>
+    </build> -->
 
 </project>
