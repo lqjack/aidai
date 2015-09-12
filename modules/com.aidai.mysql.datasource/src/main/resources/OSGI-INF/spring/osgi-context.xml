@@ -11,8 +11,4 @@
 
 	<osgi:service ref="dataSource" interface="javax.sql.DataSource" />
 
-	<osgi:service ref="user" interface="frame.mysql.datasource.IUser">
-		<!-- <osgi:registration-listener ref="frame.mysql.datasource.UserListener"
-		registration-method="registered" unregistration-method="unregistered"/> -->
-	</osgi:service>
 </beans>

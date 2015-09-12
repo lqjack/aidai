@@ -55,6 +55,7 @@
 	</build>
 
 	<dependencies>
+	
 		<!-- slf4j -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -64,6 +65,11 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>com.springsource.slf4j.nop</artifactId>
 		</dependency>
+		
+		<!-- <dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
+		</dependency> -->
 		<!-- slf4j end -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -234,7 +240,7 @@
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.utils</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.model</artifactId>
 		</dependency>
@@ -277,7 +283,7 @@
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.web</artifactId>
-		</dependency>
+		</dependency> -->
 		<!-- <dependency> <groupId>com.aidai</groupId> <artifactId>com.aidai.test</artifactId> 
 			</dependency> -->
 		<!-- <dependency> <groupId>com.aidai</groupId> <artifactId>com.aidai.client</artifactId> 

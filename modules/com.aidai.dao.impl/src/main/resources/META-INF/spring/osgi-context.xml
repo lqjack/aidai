@@ -10,7 +10,4 @@
  -->	
 	<!-- <osgi:service ref="baseDao" interface="framework.generic.dao.BaseDao"></osgi:service> -->
 	
-	<osgi:reference id="user" interface="frame.mysql.datasource.IUser">
-		<!-- <osgi:listener bind-method="bind" ref="listener" />  -->
-	</osgi:reference>
 </beans>

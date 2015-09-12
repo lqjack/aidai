@@ -1021,9 +1021,15 @@
 				<artifactId>maven-pax-plugin</artifactId>
 				<version>1.4</version>
 				<configuration>
-					<!-- equinox -->
-					<framework>felix</framework>
+					<!-- felix   -->
+					<!-- <framework>equinox</framework> -->
 					<encoding>UTF-8</encoding>
+					<provision>
+						<param>--platform=equinox</param>
+			            <param>--profiles=compendium,web,war</param>
+			            <param>--log=info</param>
+			            <param>--bootDelegation=javax.*,com.sun.*,sun.*</param>
+					</provision>
 				</configuration>
 			</plugin>
 
@@ -1437,5 +1443,13 @@
 			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
 			<url>http://repository.springsource.com/maven/bundles/external</url>
 		</repository>
-	</repositories>
+		  <repository>
+		    <id>spring-osgified-artifacts</id>
+		    <snapshots>
+		      <enabled>true</enabled>
+		    </snapshots>
+		    <name>Springframework Maven OSGified Artifacts Repository</name>
+		    <url>http://maven.springframework.org/osgi</url>
+		  </repository>
+			</repositories>
 </project>
