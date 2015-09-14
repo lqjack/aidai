@@ -65,9 +65,14 @@
 			<artifactId>com.springsource.org.aspectj.weaver</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>javax.servlet</artifactId> 
+			<version>3.0.0.v201103241009</version> </dependency> -->
+		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet</artifactId>
-			<version>3.0.0.v201103241009</version>
+			<artifactId>com.springsource.javax.servlet</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -87,12 +92,22 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>com.springsource.org.apache.commons.logging</artifactId>
 		</dependency>
+		
 		<!-- gemini -->
-		<!-- <dependency> <groupId>org.eclipse.gemini</groupId> <artifactId>org.eclipse.gemini.blueprint.core</artifactId> 
-			</dependency> <dependency> <groupId>org.eclipse.gemini</groupId> <artifactId>org.eclipse.gemini.blueprint.extender</artifactId> 
-			</dependency> <dependency> <groupId>org.eclipse.gemini</groupId> <artifactId>org.eclipse.gemini.blueprint.io</artifactId> 
-			</dependency> -->
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.extender</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.gemini</groupId>
+			<artifactId>org.eclipse.gemini.blueprint.io</artifactId>
+		</dependency>
 		<!-- gemin end -->
+		
 		<dependency>
 			<groupId>com.mchange.c3p0</groupId>
 			<artifactId>com.springsource.com.mchange.v2.c3p0</artifactId>
@@ -116,9 +131,11 @@
 			<artifactId>com.springsource.com.ibatis</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>org.junit</groupId>
+			<artifactId>com.springsource.org.junit</artifactId>
+			<scope>test</scope>
 		</dependency>
+		
 		<!-- spring -->
 		<dependency>
 			<groupId>org.aopalliance</groupId>
@@ -183,38 +200,19 @@
 			<artifactId>org.springframework.test</artifactId>
 		</dependency>
 		<!-- spring end -->
+		
 		<!-- spring osgi -->
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.extender</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.io</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.mock</artifactId>
-		</dependency>
-		<!-- <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.test</artifactId> 
+		<!-- <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.core</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.extender</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.io</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.mock</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.test</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.web</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.web.extender</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.osgi</groupId> <artifactId>org.springframework.osgi.extensions.annotation</artifactId> 
 			</dependency> -->
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.web.extender</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>org.springframework.osgi.extensions.annotation</artifactId>
-		</dependency>
 		<!-- spring osgi end -->
+		
 		<!-- project dependencies -->
 		<dependency>
 			<groupId>com.aidai</groupId>
@@ -223,6 +221,10 @@
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aidai</groupId>
+			<artifactId>com.aidai.mysql.datasource</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.aidai</groupId>
@@ -235,10 +237,6 @@
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.facade.service.impl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.aidai</groupId>
-			<artifactId>com.aidai.mysql.datasource</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.aidai</groupId>

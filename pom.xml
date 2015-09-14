@@ -21,6 +21,8 @@
 		<project.target.encoding>UTF-8</project.target.encoding>
 		<project.target.version>1.6</project.target.version>
 		<project.aidai.version>1.0.0</project.aidai.version>
+		
+		<aspectj.version>1.6.5.RELEASE</aspectj.version>
 
 		<javaxServletVersion>1.2</javaxServletVersion>
 
@@ -95,7 +97,7 @@
 	<dependencyManagement>
 		<dependencies>
 
-			<dependency>
+			<!-- <dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>jstl</artifactId>
 				<version>1.2</version>
@@ -114,7 +116,7 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.8.1</version>
-			</dependency>
+			</dependency> -->
 			<dependency>
 				<groupId>org.ops4j.pax.logging</groupId>
 				<artifactId>pax-logging-api</artifactId>
@@ -230,7 +232,7 @@
 				<artifactId>geronimo-jpa_2.0_spec</artifactId>
 				<version>${geronimoJpaSpecVersion}</version>
 			</dependency>
-			<dependency>
+			<!-- <dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>jstl</artifactId>
 				<version>${javaxServletVersion}</version>
@@ -239,7 +241,7 @@
 				<groupId>org.apache.derby</groupId>
 				<artifactId>derby</artifactId>
 				<version>${derbyVersion}</version>
-			</dependency>
+			</dependency> -->
 			<dependency>
 				<groupId>org.apache.openjpa</groupId>
 				<artifactId>openjpa</artifactId>
@@ -540,6 +542,12 @@
 				<artifactId>com.springsource.org.aopalliance</artifactId>
 				<version>${springsource.aopalliance.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>com.springsource.org.junit</artifactId>
+				<version>4.7.0</version>
+				<scope>test</scope>
+			</dependency>
 			<!-- <dependency>
 			    <groupId>org.springframework</groupId>
 			    <artifactId>org.springframework.spring-library</artifactId>
@@ -549,17 +557,17 @@
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>aspectjweaver</artifactId>
-				<version>1.6.1</version>
+				<version>1.6.5</version>
 			</dependency>
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>com.springsource.org.aspectj.runtime</artifactId>
-				<version>1.6.1</version>
+				<version>${aspectj.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>com.springsource.org.aspectj.weaver</artifactId>
-				<version>1.6.1</version>
+				<version>${aspectj.version}</version>
 			</dependency>
 			<dependency><!-- dependency by: javax.xml.ws -->
 				<groupId>javax.xml.bind</groupId>
@@ -572,7 +580,7 @@
 				<version>1.0.1</version>
 			</dependency>
 			<!-- JSP及相关的Bundle -->
-			<dependency>
+			<!-- <dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>com.springsource.javax.servlet.jsp</artifactId>
 				<version>2.1.0</version>
@@ -586,7 +594,7 @@
 				<groupId>org.apache.taglibs</groupId>
 				<artifactId>com.springsource.org.apache.taglibs.standard</artifactId>
 				<version>1.1.2</version>
-			</dependency>
+			</dependency> -->
 			<!-- STRUTS -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -612,7 +620,7 @@
 			</dependency>
 			
 			<!-- spring osgi -->
-			<dependency>
+			<!-- <dependency>
 			    <groupId>org.springframework.osgi</groupId>
 			    <artifactId>org.springframework.osgi.core</artifactId>
 			    <version>${spring.osgi.version}</version>
@@ -651,7 +659,7 @@
 			    <groupId>org.springframework.osgi</groupId>
 			    <artifactId>org.springframework.osgi.extensions.annotation</artifactId>
 			    <version>${spring.osgi.version}</version>
-			</dependency>
+			</dependency> -->
 
 			<!-- project dependencies -->
 			<dependency>

@@ -6,7 +6,7 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		p:driverClassName="com.mysql.jdbc.Driver"
-		p:url="jdbc:mysql://localhost:3306/test?autoReconnect=true"
+		p:url="jdbc:mysql://share:3306/test?autoReconnect=true"
 		p:username="root" p:password="111111" init-method="createDataSource"
 		destroy-method="close" />
 
