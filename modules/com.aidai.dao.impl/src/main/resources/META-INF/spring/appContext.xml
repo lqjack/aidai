@@ -12,18 +12,18 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- 配置要扫描的包 -->
-	<context:component-scan base-package="com.aidai.base" />
+	<context:component-scan base-package="com.aidai.dao.impl" />
 	<!-- 采用注释的方式配置bean -->
 	<context:annotation-config />
 	
 	<!-- 上面的数据源的value值用的是表达式，原因就在这里，这将配置文件放到了iBatis目录下，也就是jdbc.properties，设置了c3p0的各项参数 -->
-	<bean id="propertyConfig"
+	<!-- <bean id="propertyConfig"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location">
 			<value>classpath:jdbc.properties</value>
 		</property>
 		<property name="ignoreUnresolvablePlaceholders" value="true" />
-	</bean>
+	</bean> -->
 
 	<!-- 配置iBatis的sqlMapClient，这里当然是交给了spring去处理,其中，将SqlMapConfig文件放到了WEB-INF的iBatis目录下，也是便于管理 -->
 	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">

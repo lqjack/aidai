@@ -88,7 +88,7 @@
 		<aidai.osgi.exclude.dependencies>false</aidai.osgi.exclude.dependencies>
 		<aidai.osgi.remove.headers>Ignore-Package,Include-Resource,Private-Package,Bundle-DocURL</aidai.osgi.remove.headers>
 		<aidai.osgi.include.resource>{maven-resources}</aidai.osgi.include.resource>
-		<aries.javadoc.exclude.packages>${aidai.osgi.private.pkg}</aries.javadoc.exclude.packages>
+		<aidai.javadoc.exclude.packages>${aidai.osgi.private.pkg}</aidai.javadoc.exclude.packages>
 		<lastReleaseVersion>RELEASE</lastReleaseVersion>
 
 	</properties>
@@ -1106,7 +1106,7 @@
 						<Import-Package>${aidai.osgi.import}</Import-Package>
 						<DynamicImport-Package>${aidai.osgi.dynamic}</DynamicImport-Package>
 						<Private-Package>${aidai.osgi.private.pkg}</Private-Package>
-						<Implementation-Title>Apache Aries</Implementation-Title>
+						<Implementation-Title>Apache aidai</Implementation-Title>
 						<Implementation-Version>${project.version}</Implementation-Version>
 						<Bundle-Vendor>The Apache Software Foundation</Bundle-Vendor>
 						<Include-Resource>${aidai.osgi.include.resource}</Include-Resource>
@@ -1381,7 +1381,7 @@
 					</reportSet>
 				</reportSets>
 				<configuration>
-					<excludePackageNames>${aries.javadoc.exclude.packages}</excludePackageNames>
+					<excludePackageNames>${aidai.javadoc.exclude.packages}</excludePackageNames>
 					<quiet>true</quiet>
 					<source>1.7</source>
 					<links>

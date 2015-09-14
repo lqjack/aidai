@@ -1,4 +1,4 @@
-package frame.controller;
+package com.aidai.controller;
 
 import java.util.List;
 

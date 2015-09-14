@@ -13,9 +13,9 @@
 	<name>对外服务API</name>
 	
 	<properties>
-        <aries.osgi.export.pkg>
+        <aidai.osgi.export.pkg>
             com.aidai.facade.service.api
-        </aries.osgi.export.pkg>
+        </aidai.osgi.export.pkg>
     </properties>
 
 	<dependencies>

@@ -1,4 +1,4 @@
-package frame.controller;
+package com.aidai.controller;
 
 public class WebConstants {
 

@@ -24,7 +24,7 @@
     <filter>
         <display-name>OrdersAlertFilter</display-name>
         <filter-name>OrdersAlertFilter</filter-name>
-        <filter-class>frame.web.OrdersAlertFilter</filter-class>
+        <filter-class>com.aidai.web.OrdersAlertFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>OrdersAlertFilter</filter-name>
@@ -34,20 +34,20 @@
     <servlet>
         <display-name>TradeAppServlet</display-name>
         <servlet-name>TradeAppServlet</servlet-name>
-        <servlet-class>frame.web.TradeAppServlet</servlet-class>
+        <servlet-class>com.aidai.web.TradeAppServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     
     <servlet>
         <display-name>TradeConfigServlet</display-name>
         <servlet-name>TradeConfigServlet</servlet-name>
-        <servlet-class>frame.web.TradeConfigServlet</servlet-class>
+        <servlet-class>com.aidai.web.TradeConfigServlet</servlet-class>
     </servlet>
     
    <servlet>
         <display-name>TradeScenarioServlet</display-name>
         <servlet-name>TradeScenarioServlet</servlet-name>
-        <servlet-class>frame.web.TradeScenarioServlet</servlet-class>
+        <servlet-class>com.aidai.web.TradeScenarioServlet</servlet-class>
         <init-param>
             <description>Sets the default RuntimeMode. Legal values include Full EJB3, Direct (JDBC), Session (EJB3) To Direct, Web JDBC, and Web JPA</description>
             <param-name>runTimeMode</param-name>
@@ -107,72 +107,72 @@
     <servlet>
         <display-name>ExplicitGC</display-name>
         <servlet-name>ExplicitGC</servlet-name>
-        <servlet-class>frame.web.prims.ExplicitGC</servlet-class>
+        <servlet-class>com.aidai.web.prims.ExplicitGC</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingServlet</display-name>
         <servlet-name>PingServlet</servlet-name>
-        <servlet-class>frame.web.prims.PingServlet</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingServlet</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingServletWriter</display-name>
         <servlet-name>PingServletWriter</servlet-name>
-        <servlet-class>frame.web.prims.PingServletWriter</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingServletWriter</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingServlet2Servlet</display-name>
         <servlet-name>PingServlet2Servlet</servlet-name>
-        <servlet-class>frame.web.prims.PingServlet2Servlet</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingServlet2Servlet</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingServlet2ServletRcv</display-name>
         <servlet-name>PingServlet2ServletRcv</servlet-name>
-        <servlet-class>frame.web.prims.PingServlet2ServletRcv</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingServlet2ServletRcv</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingServlet2Include</display-name>
         <servlet-name>PingServlet2Include</servlet-name>
-        <servlet-class>frame.web.prims.PingServlet2Include</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingServlet2Include</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingServlet2IncludeRcv</display-name>
         <servlet-name>PingServlet2IncludeRcv</servlet-name>
-        <servlet-class>frame.web.prims.PingServlet2IncludeRcv</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingServlet2IncludeRcv</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingServlet2Jsp</display-name>
         <servlet-name>PingServlet2Jsp</servlet-name>
-        <servlet-class>frame.web.prims.PingServlet2Jsp</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingServlet2Jsp</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingSession1</display-name>
         <servlet-name>PingSession1</servlet-name>
-        <servlet-class>frame.web.prims.PingSession1</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingSession1</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingSession2</display-name>
         <servlet-name>PingSession2</servlet-name>
-        <servlet-class>frame.web.prims.PingSession2</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingSession2</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingSession3</display-name>
         <servlet-name>PingSession3</servlet-name>
-        <servlet-class>frame.web.prims.PingSession3</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingSession3</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingJDBCRead</display-name>
         <servlet-name>PingJDBCRead</servlet-name>
-        <servlet-class>frame.web.prims.PingJDBCRead</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingJDBCRead</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingJDBCWrite</display-name>
         <servlet-name>PingJDBCWrite</servlet-name>
-        <servlet-class>frame.web.prims.PingJDBCWrite</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingJDBCWrite</servlet-class>
     </servlet>
     <servlet>
         <display-name>PingServlet2JNDI</display-name>
         <servlet-name>PingServlet2JNDI</servlet-name>
-        <servlet-class>frame.web.prims.PingServlet2JNDI</servlet-class>
+        <servlet-class>com.aidai.web.prims.PingServlet2JNDI</servlet-class>
     </servlet>
     <!-- End of Web container primitives -->
     

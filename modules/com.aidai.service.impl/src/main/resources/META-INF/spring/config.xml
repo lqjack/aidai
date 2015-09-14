@@ -5,6 +5,6 @@
 		init-method="startUp">
 	</bean>
 
-	<service ref="databaseService" interface="frame.service.IDatabaseService" />
+	<service ref="databaseService" interface="com.aidai.service.IDatabaseService" />
 
 </blueprint>
