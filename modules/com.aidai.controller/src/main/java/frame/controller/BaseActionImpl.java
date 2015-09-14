@@ -2,9 +2,8 @@ package frame.controller;
 
 import java.util.List;
 
+import com.aidai.service.ServiceException;
 import com.aidai.utils.GenericsUtils;
-
-import frame.service.ServiceException;
 
 public abstract class  BaseActionImpl<T,F> extends AbstractBaseAction<T, F> {
 	private static final long serialVersionUID = 1L;

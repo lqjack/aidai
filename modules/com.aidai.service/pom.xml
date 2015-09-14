@@ -15,11 +15,19 @@
 
 	<properties>
 		<aries.osgi.export.pkg>
-			frame.service
+			com.aidai.service
 		</aries.osgi.export.pkg>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.nop</artifactId>
+		</dependency>
 		<!-- project dependencies -->
 		<dependency>
 			<groupId>com.aidai</groupId>
@@ -32,15 +40,6 @@
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.dao</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>com.springsource.slf4j.api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>com.springsource.slf4j.nop</artifactId>
 		</dependency>
 
 	</dependencies>

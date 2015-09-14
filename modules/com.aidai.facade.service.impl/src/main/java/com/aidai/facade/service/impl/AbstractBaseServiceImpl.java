@@ -5,9 +5,9 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import frame.service.BaseService;
-import frame.service.ServiceException;
-import framework.generic.dao.Page;
+import com.aidai.dao.Page;
+import com.aidai.service.BaseService;
+import com.aidai.service.ServiceException;
 @Transactional
 public abstract class AbstractBaseServiceImpl<T, F> extends ServiceTemplate<T, F>implements BaseService<T, F> {
 	@Override

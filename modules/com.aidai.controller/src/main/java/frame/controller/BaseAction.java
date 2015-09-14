@@ -29,14 +29,13 @@ import org.apache.struts2.util.TokenHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aidai.dao.Page;
+import com.aidai.model.User;
 import com.aidai.utils.DateUtils;
 import com.aidai.utils.NumberUtils;
 import com.aidai.utils.StringUtils;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-
-import frame.model.User;
-import framework.generic.dao.Page;
 
 public class BaseAction<T,F> extends ActionSupport
 		implements ServletResponseAware {

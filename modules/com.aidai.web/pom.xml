@@ -15,10 +15,10 @@
 
 	<properties>
 		<aidai.osgi.export.pkg>
-			!frame.web.*
+			!com.aidai.web.*
 		</aidai.osgi.export.pkg>
 		<aidai.osgi.private.pkg>
-			frame.web.*
+			com.aidai.web.*
 		</aidai.osgi.private.pkg>
 	</properties>
 

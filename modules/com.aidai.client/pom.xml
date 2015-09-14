@@ -30,16 +30,16 @@
 	</build>
 
 	<dependencies>
+	
+		<!-- project dependencies -->
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.model</artifactId>
 		</dependency>
-		
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.utils</artifactId>
 		</dependency>
-		
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.facade.service.api</artifactId>
@@ -48,7 +48,6 @@
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.facade.service.impl</artifactId>
 		</dependency>
-		
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.service</artifactId>

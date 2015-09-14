@@ -2,13 +2,12 @@ package frame.controller;
 
 import java.util.List;
 
+import com.aidai.service.BaseService;
+import com.aidai.service.ServiceException;
 import com.aidai.utils.GenericsUtils;
 import com.aidai.utils.GenericsUtils.CalledMethodInterface;
 import com.aidai.utils.StringUtils;
 import com.opensymphony.xwork2.ModelDriven;
-
-import frame.service.BaseService;
-import frame.service.ServiceException;
 
 public abstract class AbstractBaseAction<T,F> extends BaseActionTemlate<T,F> implements ModelDriven<T>,BaseActionInterface {
 

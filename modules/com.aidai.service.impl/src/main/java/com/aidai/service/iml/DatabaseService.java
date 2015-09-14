@@ -1,6 +1,6 @@
 package com.aidai.service.iml;
 
-import framework.generic.dao.IbatisGenericDao;
+import com.aidai.dao.IbatisGenericDao;
 
 public class DatabaseService {
 	private IbatisGenericDao sqlDao;

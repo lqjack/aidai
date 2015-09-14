@@ -7,6 +7,15 @@
 		<groupId>com.aidai</groupId>
 		<version>1.0.0</version>
 	</parent>
+	
+	<properties>
+		<aidai.osgi.export.pkg>
+			com.aidai.facade.service.api.*;provide:=true,*
+		</aidai.osgi.export.pkg>
+		<aidai.osgi.import>
+			com.aidai.dao;provide:=true,*
+		</aidai.osgi.import>
+	</properties>
 
 	<artifactId>com.aidai.facade.service.impl</artifactId>
 	<packaging>bundle</packaging>

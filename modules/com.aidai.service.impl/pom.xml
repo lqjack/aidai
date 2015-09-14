@@ -12,14 +12,17 @@
 	<packaging>bundle</packaging>
 
 	<name>內部使用服务实现</name>
+	
+	<properties>
+		<aidai.osgi.import>
+			com.aidai.dao;provide:=true,*
+		</aidai.osgi.import>
+	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.model</artifactId>
-			<version>1.0.0</version>
-			<type>bundle</type>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.aidai</groupId>
@@ -29,17 +32,11 @@
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.utils</artifactId>
-			<version>1.0.0</version>
-			<type>bundle</type>
-			<scope>compile</scope>
 		</dependency>
 		
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.dao</artifactId>
-			<version>1.0.0</version>
-			<type>bundle</type>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.aidai</groupId>
@@ -48,22 +45,4 @@
 		
 	</dependencies>
 
-	<build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin
-                </artifactId>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Import-Package>
-                           framework.generic.dao;provide:=true,
-                           *
-                        </Import-Package>
-                    </instructions>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

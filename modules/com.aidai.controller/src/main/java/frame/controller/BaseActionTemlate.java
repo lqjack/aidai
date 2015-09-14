@@ -2,7 +2,7 @@ package frame.controller;
 
 import java.util.List;
 
-import frame.service.ServiceException;
+import com.aidai.service.ServiceException;
 
 public abstract class BaseActionTemlate<T, F> extends BaseAction<T,F> {
 	

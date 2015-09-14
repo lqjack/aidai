@@ -65,7 +65,6 @@
 		<aidai.osgi.import.before.defaults />
 		<aidai.osgi.import.additional />
 		<aidai.osgi.import.pkg>
-			org.apache.aries.*,
 			${aidai.osgi.import.before.defaults},
 			${aidai.osgi.import.defaults},
 			${aidai.osgi.import.additional},

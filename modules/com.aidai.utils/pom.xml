@@ -28,12 +28,10 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>com.springsource.slf4j.api</artifactId>
-			<version>${springsource.slf4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>com.springsource.slf4j.nop</artifactId>
-			<version>${springsource.slf4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.struts</groupId>
