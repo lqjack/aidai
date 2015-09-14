@@ -30,8 +30,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aidai.utils.DateUtils;
-import com.aidai.utils.IPSeeker;
-import com.aidai.utils.IPUtils;
 import com.aidai.utils.NumberUtils;
 import com.aidai.utils.StringUtils;
 import com.opensymphony.xwork2.ActionContext;
@@ -137,19 +135,19 @@ public class BaseAction<T,F> extends ActionSupport
 	 * 获取http请求的实际IP
 	 * @return
 	 */
-	protected String getRequestIp() {
+	/*protected String getRequestIp() {
 		return IPUtils.getRemortIP(request);
-	}
+	}*/
 	/**
 	 * 获取IP所在地
 	 * @return
 	 */
-	protected String getAreaByIp() {
+	/*protected String getAreaByIp() {
 		return getRequestIp();
-	}
-	protected String getAreaByIp(String ip) {
+	}*/
+	/*protected String getAreaByIp(String ip) {
 		return IPSeeker.getInstance().getArea(ip);
-	}
+	}*/
 	/**
 	 * 获取当前时间
 	 * @return

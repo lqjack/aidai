@@ -12,12 +12,12 @@
 	<packaging>bundle</packaging>
 
 	<name>內部使用服务及其实现</name>
-	
+
 	<properties>
-        <aries.osgi.export.pkg>
-            frame.service
-        </aries.osgi.export.pkg>
-    </properties>
+		<aries.osgi.export.pkg>
+			frame.service
+		</aries.osgi.export.pkg>
+	</properties>
 
 	<dependencies>
 		<!-- project dependencies -->
@@ -33,6 +33,16 @@
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.dao</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.nop</artifactId>
+		</dependency>
+
 	</dependencies>
 
 </project>

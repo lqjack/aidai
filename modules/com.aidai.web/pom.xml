@@ -12,7 +12,7 @@
 	<packaging>bundle</packaging>
 
 	<name>Web服务提供静态资源</name>
-	
+
 	<properties>
 		<aidai.osgi.export.pkg>
 			!frame.web.*
@@ -23,6 +23,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.0.1</version>
+		</dependency>
 		<!-- project dependencies -->
 		<dependency>
 			<groupId>com.aidai</groupId>
@@ -39,6 +44,6 @@
 			<artifactId>com.aidai.dao</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+
 	</dependencies>
 </project>

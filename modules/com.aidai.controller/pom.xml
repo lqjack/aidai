@@ -18,14 +18,14 @@
 			frame.controller
 		</aries.osgi.export.pkg>
 	</properties>
-	
+
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>com.springsource.javax.servlet</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>com.springsource.org.apache.commons.fileupload</artifactId>
@@ -34,23 +34,23 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>com.springsource.org.apache.commons.io</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.freemarker</groupId>
 			<artifactId>com.springsource.freemarker</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.web</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
 			<version>${struts2-core.version}</version>
 			<exclusions>
-				<!-- <exclusion>
+				<exclusion>
 					<groupId>com.sun</groupId>
 					<artifactId>tools</artifactId>
 				</exclusion>
@@ -64,12 +64,12 @@
 				</exclusion>
 				<exclusion>
 					<groupId>opensymphony</groupId>
-					<artifactId>ognl</artifactId> 
-				</exclusion>-->
+					<artifactId>ognl</artifactId>
+				</exclusion>
 			</exclusions>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- struts osgi -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -79,7 +79,7 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>com.springsource.org.apache.commons.logging</artifactId>
 		</dependency>
-		<dependency> 
+		<dependency>
 			<groupId>org.aopalliance</groupId>
 			<artifactId>com.springsource.org.aopalliance</artifactId>
 		</dependency>
@@ -96,10 +96,10 @@
 			<artifactId>org.springframework.core</artifactId>
 		</dependency>
 		<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>org.springframework.web</artifactId>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.web</artifactId>
 		</dependency>
-		
+
 		<!-- project dependies -->
 		<dependency>
 			<groupId>com.aidai</groupId>

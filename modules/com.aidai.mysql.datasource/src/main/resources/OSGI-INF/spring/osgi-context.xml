@@ -11,5 +11,4 @@
 
 	<osgi:service ref="dataSource" interface="javax.sql.DataSource"/>
 		
-
 </beans>

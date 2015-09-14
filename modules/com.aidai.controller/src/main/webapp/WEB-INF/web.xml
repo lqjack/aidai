@@ -5,6 +5,11 @@
 
 	<display-name>aidai</display-name>
 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
 	<filter>
 		<filter-name>struts2-prepare</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareFilter</filter-class>
@@ -32,11 +37,13 @@
 	</listener>
 	<context-param>
 		<param-name>contextClass</param-name>
-		<param-value>org.springframework.osgi.web.context.support.OsgiBundleXmlWebApplicationContext</param-value>
+		<param-value> 
+  			org.springframework.osgi.web.context.support.OsgiBundleXmlWebApplicationContext 
+  		</param-value>
 	</context-param>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>osgibundle:/META-INF/spring/*.xml</param-value>
+		<param-value>osgibundle:/META-INF/spring/*.xml,/spring/*.xml </param-value>
 	</context-param>
 	<context-param>
 		<param-name>parentContextKey</param-name>
