@@ -73,6 +73,11 @@
 		<org.apache.felix.http.base.version>2.2.0</org.apache.felix.http.base.version>
 		<mortbay.jetty-servlet-api.version>2.5-20081211</mortbay.jetty-servlet-api.version>
 		
+		
+		<javassist.version>3.9.0.GA</javassist.version>
+		<persistence-jpa.version>1.0</persistence-jpa.version>
+		<activemq-camel.version>5.4.0-fuse-00-00</activemq-camel.version>
+		
 		<!-- <aspectj.version>1.6.5.RELEASE</aspectj.version>
 		<javaxServletVersion>1.2</javaxServletVersion>
 
