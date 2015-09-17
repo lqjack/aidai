@@ -1443,94 +1443,6 @@
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
 					<version>${m2e-lifecycle-mapping.version}</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.servicemix.tooling
-										</groupId>
-										<artifactId>
-											depends-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.2,)
-										</versionRange>
-										<goals>
-											<goal>
-												generate-depends-file
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.maven.plugins
-										</groupId>
-										<artifactId>
-											maven-antrun-plugin
-										</artifactId>
-										<versionRange>
-											[1.2,)
-										</versionRange>
-										<goals>
-											<goal>run</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.codehaus.mojo
-										</groupId>
-										<artifactId>
-											properties-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.0-alpha-2,)
-										</versionRange>
-										<goals>
-											<goal>
-												read-project-properties
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.ops4j.pax.exam
-										</groupId>
-										<artifactId>
-											maven-paxexam-plugin
-										</artifactId>
-										<versionRange>
-											[1.2.3,)
-										</versionRange>
-										<goals>
-											<goal>
-												generate-depends-file
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-shade-plugin</artifactId>
@@ -1540,19 +1452,6 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
 					<version>${versions-maven-plugin.version}</version>
-					<configuration>
-						<excludes>
-							<!-- 3.5.0.v20090520 < 3.3.0-v20070530 -->
-							<exclude>org.eclipse:osgi</exclude>
-							<!-- 2.0.0-SNAPSHOT < 2.0.0-beta -->
-							<exclude>org.apache.openjpa:openjpa</exclude>
-							<!-- maven 3.0 components don't work with 2.0 -->
-							<exclude>org.apache.maven:maven-plugin-api</exclude>
-							<exclude>org.apache.maven:maven-project</exclude>
-							<exclude>org.apache.maven:maven-artifact</exclude>
-							<exclude>org.apache.maven:maven-archiver</exclude>
-						</excludes>
-					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -1587,6 +1486,11 @@
 	                <groupId>org.codehaus.mojo</groupId>  
 	                <artifactId>exec-maven-plugin</artifactId>
 					<version>${exec-maven-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>${build-helper-maven-plugin.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -1669,6 +1573,24 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<configuration>
 					<source>${project.source.version}</source>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<!-- 3.5.0.v20090520 < 3.3.0-v20070530 -->
+						<exclude>org.eclipse:osgi</exclude>
+						<!-- 2.0.0-SNAPSHOT < 2.0.0-beta -->
+						<exclude>org.apache.openjpa:openjpa</exclude>
+						<!-- maven 3.0 components don't work with 2.0 -->
+						<exclude>org.apache.maven:maven-plugin-api</exclude>
+						<exclude>org.apache.maven:maven-project</exclude>
+						<exclude>org.apache.maven:maven-artifact</exclude>
+						<exclude>org.apache.maven:maven-archiver</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 			
@@ -1967,6 +1889,100 @@
 				<version>${maven-pmd-plugin.version}</version>
 				<configuration>
 					<targetJdk>project.target.version</targetJdk>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.eclipse.m2e</groupId>
+				<artifactId>lifecycle-mapping</artifactId>
+				<version>${m2e-lifecycle-mapping.version}</version>
+				<configuration>
+					<lifecycleMappingMetadata>
+						<pluginExecutions>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.apache.servicemix.tooling
+									</groupId>
+									<artifactId>
+										depends-maven-plugin
+									</artifactId>
+									<versionRange>
+										[1.2,)
+									</versionRange>
+									<goals>
+										<goal>
+											generate-depends-file
+										</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.apache.maven.plugins
+									</groupId>
+									<artifactId>
+										maven-antrun-plugin
+									</artifactId>
+									<versionRange>
+										[1.2,)
+									</versionRange>
+									<goals>
+										<goal>run</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.codehaus.mojo
+									</groupId>
+									<artifactId>
+										properties-maven-plugin
+									</artifactId>
+									<versionRange>
+										[1.0-alpha-2,)
+									</versionRange>
+									<goals>
+										<goal>
+											read-project-properties
+										</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.ops4j.pax.exam
+									</groupId>
+									<artifactId>
+										maven-paxexam-plugin
+									</artifactId>
+									<versionRange>
+										[1.2.3,)
+									</versionRange>
+									<goals>
+										<goal>
+											generate-depends-file
+										</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+						</pluginExecutions>
+					</lifecycleMappingMetadata>
 				</configuration>
 			</plugin>
 		</plugins>
