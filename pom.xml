@@ -16,7 +16,7 @@
 		
 		<maven.version>3.0.3</maven.version>
 		
-		<project.source.version>1.6</project.source.version>
+		<project.source.version>1.5</project.source.version>
 		<project.target.encoding>UTF-8</project.target.encoding>
 		<project.target.version>${project.source.version}</project.target.version>
 		

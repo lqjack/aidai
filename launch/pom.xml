@@ -38,11 +38,11 @@
 	                <id>process-resources</id>  
 	                <phase>process-resources</phase>  
 	                <goals>  
-	                    <!-- <goal>install-kars</goal> -->  
+	                    <!-- <goal>install-kars</goal> 
 	                    <goal>verify</goal>
 	                    <goal>kar</goal>
 	                    <goal>features-add-to-repository</goal>
-	                    <goal>assembly</goal>
+	                    <goal>assembly</goal>  -->  
 	                </goals>  
 	            </execution>                      
 	        </executions>  

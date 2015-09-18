@@ -5,8 +5,7 @@
 	<artifactId>com.aidai.consumer</artifactId>
 	<packaging>bundle</packaging>
 
-	<name>com.aidai.consumer</name>
-	<url>http://maven.apache.org</url>
+	<name>consumer</name>
 
 	<parent>
 		<groupId>com.aidai</groupId>
