@@ -31,7 +31,7 @@
 		
 		<!-- denpendency -->
 		<activemq-version>5.4.1</activemq-version>
-        <aries-version>0.2</aries-version>
+        <aries-version>0.3</aries-version>
         <asm-version>1.5.3</asm-version>
 		<camel-version>2.4.0</camel-version>
  		<commons-dbcp-version>1.2.2</commons-dbcp-version>     
@@ -52,7 +52,7 @@
         <openjpa-version>2.0.1</openjpa-version>
         <servicemix-version>4.3.0</servicemix-version>
 		<spring-osgi-version>1.2.0</spring-osgi-version>
-       	<spring-version>3.0.3.RELEASE</spring-version>
+       	<spring-version>3.0.3</spring-version>
 		<wicket-version>1.4.7</wicket-version>
 		
 		<slf4j.version>1.5.8</slf4j.version>
@@ -76,7 +76,7 @@
 		
 		<javassist.version>3.9.0.GA</javassist.version>
 		<persistence-jpa.version>1.0</persistence-jpa.version>
-		<activemq-camel.version>5.4.0-fuse-00-00</activemq-camel.version>
+		<activemq-camel.version>5.4.0</activemq-camel.version>
 		
 		<!-- <aspectj.version>1.6.5.RELEASE</aspectj.version>
 		<javaxServletVersion>1.2</javaxServletVersion>
@@ -1517,7 +1517,7 @@
 					<showWarnings>true</showWarnings>
 					<source>${project.source.version}</source>
 					<target>${project.target.version}</target>
-					<encoding>${project.source.version}</encoding>
+					<encoding>${project.target.encoding}</encoding>
 					<scope>system</scope>
 					<excludes>
 						<exclude>**/*.svn</exclude>
@@ -1594,81 +1594,6 @@
 				</configuration>
 			</plugin>
 			
-			<plugin>  
-                <groupId>org.apache.karaf.tooling</groupId>  
-                <artifactId>karaf-maven-plugin</artifactId>  
-                <executions>  
-                    <execution>  
-                        <id>process-resources</id>  
-                        <phase>process-resources</phase>  
-                        <goals>  
-                            <!-- <goal>install-kars</goal> -->  
-                            <goal>verify</goal>
-                            <goal>kar</goal>
-                            <goal>features-add-to-repository</goal>
-                            <goal>assembly</goal>
-                        </goals>  
-                    </execution>                      
-                </executions>  
-                <configuration>  
-                    <installedFeatures>  
-                        <feature>wrapper</feature>  
-                    </installedFeatures>  
-                    <bootFeatures>  
-                        <feature>framework</feature>  
-                        <feature>standard</feature>  
-                        <!--<feature>obr</feature>-->  
-                        <feature>region</feature>  
-                        <!--<feature>spring</feature>-->                      
-                    </bootFeatures>  
-                </configuration>  
-            </plugin>       
-              
-            <plugin>  
-                <groupId>org.codehaus.mojo</groupId>  
-                <artifactId>exec-maven-plugin</artifactId>  
-                <executions>  
-                    <execution>  
-                        <goals>  
-                            <goal>exec</goal>  
-                        </goals>  
-                    </execution>  
-                </executions>  
-                <configuration>  
-                    <executable>java</executable>  
-                    <workingDirectory>${project.basedir}/target/assembly</workingDirectory>  
-                    <arguments>  
-  
-                        <argument>-classpath</argument>  
-                        <argument>${project.basedir}/target/assembly/conf${path.separator}${project.basedir}/target/assembly/lib/karaf-jaas-boot.jar${path.separator}${project.basedir}/target/assembly/lib/karaf-jmx-boot.jar${path.separator}${project.basedir}/target/assembly/lib/karaf-org.osgi.core.jar${path.separator}${project.basedir}/target/assembly/lib/karaf.jar</argument>  
-                        <argument>-Xmx512m</argument>  
-                        <argument>-XX:MaxPermSize=512m</argument>  
-                        <argument>-Dkaraf.startRemoteShell=true</argument>  
-                        <argument>-Djava.net.preferIPv4Stack=true</argument>  
-                        <argument>-Dderby.system.home=${project.basedir}/target/assembly/data/derby</argument>  
-                        <argument>-Dderby.storage.fileSyncTransactionLog=true</argument>  
-                        <argument>-Dcom.sun.management.jmxremote</argument>  
-                        <argument>-Dkaraf.startLocalConsole=true</argument>                          
-                        <argument>-Djline.WindowsTerminal.directConsole=false</argument>                          
-                        <argument>-Dkaraf.home=${project.basedir}/target/assembly</argument>  
-                        <argument>-Dkaraf.base=${project.basedir}/target/assembly</argument>  
-                        <argument>-Dkaraf.etc=${project.basedir}/target/assembly/etc</argument>  
-                        <argument>-Dkaraf.instances=${project.basedir}/target/assembly/instances</argument>  
-                        <argument>-Djava.io.tmpdir=${project.basedir}/target/assembly/data/tmp</argument>  
-                        <argument>-Djava.endorsed.dirs=${project.basedir}/target/assembly/lib/endorsed</argument>  
-                        <argument>-Dkaraf.data=${project.basedir}/target/assembly/data</argument>  
-                        <argument>-Djava.util.logging.config.file=${project.basedir}/target/assembly/etc/java.util.logging.properties</argument>  
-                          
-                        <!-- Debug configuration -->  
-                        <argument>-Xdebug</argument>  
-                        <argument>-Djava.compiler=NONE</argument>  
-                        <argument>-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005</argument>  
-  
-                        <argument>org.apache.karaf.main.Main</argument>  
-                    </arguments>  
-                </configuration>  
-            </plugin>  
-			
 		</plugins>
 	</build>
 
@@ -1685,32 +1610,7 @@
 			
 			<build>
 				<plugins>
-					<plugin>
-						<artifactId>maven-assembly-plugin</artifactId>
-						<dependencies>
-							<dependency>
-								<groupId>org.apache.apache.resources</groupId>
-								<artifactId>apache-source-release-assembly-descriptor</artifactId>
-								<version>${apache-source-release-assembly-descriptor.version}</version>
-							</dependency>
-						</dependencies>
-						<executions>
-							<execution>
-								<id>source-release-assembly</id>
-								<phase>package</phase>
-								<goals>
-									<goal>single</goal>
-								</goals>
-								<configuration>
-									<runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
-									<descriptorRefs>
-										<descriptorRef>${sourceReleaseAssemblyDescriptor}</descriptorRef>
-									</descriptorRefs>
-									<tarLongFileMode>gnu</tarLongFileMode>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
+					
 					<!-- We want to deploy the artifact to a staging location for perusal -->
 					<plugin>
 						<inherited>true</inherited>
@@ -1785,16 +1685,16 @@
 								<configuration>
 									<rules>
 										<requirePluginVersions>
-											<banLatest>true</banLatest>
-											<banRelease>true</banRelease>
-											<banSnapshots>true</banSnapshots>
-											<banTimestamps>true</banTimestamps>
+											<banLatest>false</banLatest>
+											<banRelease>false</banRelease>
+											<banSnapshots>false</banSnapshots>
+											<banTimestamps>false</banTimestamps>
 										</requirePluginVersions>
 										<requireReleaseDeps>
 											<searchTransitive>true</searchTransitive>
 										</requireReleaseDeps>
 									</rules>
-									<fail>true</fail>
+									<fail>false</fail>
 								</configuration>
 							</execution>
 						</executions>

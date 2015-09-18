@@ -16,8 +16,13 @@
     limitations under the License.
 -->
 <features>
+
+	<feature name="test" version="1.0.0">
+		<bundle>mvn:com.aidai/com.aidai.provider/1.0.0</bundle>
+		<bundle>mvn:com.aidai/com.aidai.consumer/1.0.0</bundle>
+	</feature>
 	
-   <feature name="reportincident" version="${pom.version}">
+   <!-- <feature name="reportincident" version="${pom.version}">
         <feature version='${camel-version}'>camel-bindy</feature>
         <feature version='${camel-version}'>camel-cxf</feature>
         <feature version='${servicemix-version}'>camel-activemq</feature>
@@ -64,7 +69,5 @@
         <bundle>mvn:org.apache.aries/org.apache.aries.util/${aries-version}</bundle>
         <bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.container.context/${aries-version}</bundle>
         <bundle>mvn:org.apache.aries.jndi/org.apache.aries.jndi/${aries-version}</bundle>
-
-
-    </feature>
+    </feature> -->
 </features>

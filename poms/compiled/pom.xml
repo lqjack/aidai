@@ -32,7 +32,7 @@
 			</resource>
 		</resources>
 		<plugins>
-			<plugin>
+			<!-- <plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<archive>
@@ -42,7 +42,7 @@
 					<warSourceDirectory>src/webapp</warSourceDirectory>
 					<warSourceExcludes>WEB-INF/lib/*</warSourceExcludes>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<!-- | the following instructions build a simple set of public/private 
 					classes into an OSGi bundle -->
