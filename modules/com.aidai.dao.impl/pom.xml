@@ -15,13 +15,13 @@
 
 	<properties>
 		<aidai.osgi.export.pkg>
-			!frame.generic.dao.impl.*
+			!com.aidai.dao.impl.*
 		</aidai.osgi.export.pkg>
 		<aidai.osgi.import>
-			framework.generic.dao;provide:=true,*
+			com.aidai.dao;provide:=true,*
 		</aidai.osgi.import>
 		<aidai.osgi.private.pkg>
-			frame.generic.dao.impl.*
+			com.aidai.dao.impl.*
 		</aidai.osgi.private.pkg>
 	</properties>
 

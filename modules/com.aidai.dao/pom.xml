@@ -15,7 +15,7 @@
 
 	<properties>
 		<aidai.osgi.export.pkg>
-			framework.generic.dao
+			com.aidai.dao
 		</aidai.osgi.export.pkg>
 		<aidai.osgi.private.pkg />
 	</properties>
@@ -27,7 +27,6 @@
 			<artifactId>com.aidai.model</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>com.aidai</groupId>
 			<artifactId>com.aidai.utils</artifactId>

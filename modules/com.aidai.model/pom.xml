@@ -14,10 +14,10 @@
 	<name>领域模型</name>
 	
 	<properties>
-        <aries.osgi.export.pkg>
-            frame.model
-        </aries.osgi.export.pkg>
-        <aries.osgi.private.pkg />
+        <aidai.osgi.export.pkg>
+            com.aidai.model
+        </aidai.osgi.export.pkg>
+        <aidai.osgi.private.pkg />
     </properties>
    
    	<dependencies>

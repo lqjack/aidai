@@ -12,21 +12,40 @@
 	<packaging>pom</packaging>
 
 	<build>
-
 		<plugins>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.4</version>
+				<extensions>true</extensions>
+				<inherited>true</inherited>
 				<configuration>
-					<Import-Package>*</Import-Package>
+					<excludeDependencies>${aidai.osgi.exclude.dependencies}</excludeDependencies>
+					<instructions>
+						<Bundle-Name>${project.name}</Bundle-Name>
+						<Bundle-SymbolicName>${aidai.osgi.symbolic.name}</Bundle-SymbolicName>
+						<Bundle-Activator>${aidai.osgi.activator}</Bundle-Activator>
+						<Export-Package>${aidai.osgi.export}</Export-Package>
+						<Import-Package>${aidai.osgi.import}</Import-Package>
+						<DynamicImport-Package>${aidai.osgi.dynamic}</DynamicImport-Package>
+						<Private-Package>${aidai.osgi.private.pkg}</Private-Package>
+						<Implementation-Title>Apache aidai</Implementation-Title>
+						<Implementation-Version>${project.version}</Implementation-Version>
+						<Bundle-Vendor>The Apache Software Foundation</Bundle-Vendor>
+						<Include-Resource>${aidai.osgi.include.resource}</Include-Resource>
+						<_removeheaders>${aidai.osgi.remove.headers}}</_removeheaders>
+						<_failok>${aidai.osgi.failok}</_failok>
+						<_consumer-policy>${aidai.osgi.import.default.version}</_consumer-policy>
+						<_provider-policy>$&lt;range;[==,=+)&gt;</_provider-policy>
+						<Export-Service>${aidai.osgi.export.service}</Export-Service>
+						<Import-Service>${aidai.osgi.import.service}</Import-Service>
+					</instructions>
+					
 					<supportedProjectTypes>
 						<supportedProjectType>jar</supportedProjectType>
 						<supportedProjectType>bundle</supportedProjectType>
 						<supportedProjectType>war</supportedProjectType>
 					</supportedProjectTypes>
 				</configuration>
-				<extensions>true</extensions>
 			</plugin>
 
 			<plugin>
@@ -65,7 +84,7 @@
 	</build>
 
 	<dependencies>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>com.springsource.slf4j.api</artifactId>
 		</dependency>
@@ -77,11 +96,13 @@
 		<dependency>
 			<groupId>com.mchange.c3p0</groupId>
 			<artifactId>com.springsource.com.mchange.v2.c3p0</artifactId>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<modules>
-		<module>com.aidai.utils</module>
+		<module>com.aidai.provider</module>
+		<module>com.aidai.consumer</module>		
+		<!-- <module>com.aidai.utils</module>
 		<module>com.aidai.model</module>
 		<module>com.aidai.model.impl</module>
 		<module>com.aidai.mysql.datasource</module>
@@ -92,8 +113,9 @@
 		<module>com.aidai.service</module>
 		<module>com.aidai.service.impl</module>
 		<module>com.aidai.controller</module>
-		<module>com.aidai.web</module>
+		<module>com.aidai.web</module> -->
 		<!-- <module>com.aidai.test</module> -->
 		<!-- <module>com.aidai.client</module> -->
+		<module>com.aidai.features</module>
 	</modules>
 </project>

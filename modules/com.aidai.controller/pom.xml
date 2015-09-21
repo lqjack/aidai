@@ -14,9 +14,9 @@
 	<name>控制器</name>
 
 	<properties>
-		<aries.osgi.export.pkg>
-			frame.controller
-		</aries.osgi.export.pkg>
+		<aidai.osgi.export.pkg>
+			com.aidai.controller
+		</aidai.osgi.export.pkg>
 	</properties>
 
 	<dependencies>

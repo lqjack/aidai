@@ -14,10 +14,9 @@
 	<name>测试</name>
 
 	<properties>
-		<aries.osgi.export.pkg>
-			com.aidai.com.aidai.test
-		</aries.osgi.export.pkg>
-
+		<!-- <aries.osgi.export.pkg>
+			com.aidai.test
+		</aries.osgi.export.pkg> -->
 	</properties>
 
 	<dependencies>
@@ -31,7 +30,7 @@
 			<artifactId>org.osgi.compendium</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.eclipse</groupId>
 			<artifactId>osgi</artifactId>
 			<scope>provided</scope>
@@ -50,7 +49,7 @@
 			<groupId>org.apache.aries</groupId>
 			<artifactId>org.apache.aries.util</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 
 		<!-- pax -->
 		<dependency>
@@ -83,11 +82,11 @@
 		</dependency>
 
 		<!-- junit -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.configadmin</artifactId>
@@ -110,11 +109,11 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.apache.servicemix.bundles</groupId>
 			<artifactId>org.apache.servicemix.bundles.cglib</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>org.ow2.asm</groupId>

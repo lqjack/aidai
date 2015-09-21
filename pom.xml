@@ -7,26 +7,79 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
-	<name>根</name>
+	<name>aidai -- parent</name>
 	<url>http://www.cnaidai.cn</url>
 
-	<organization>
-		<url>http://aidai.com</url>
-		<name>aidai</name>
-	</organization>
-
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.source.version>1.6</project.source.version>
-		<project.target.encoding>UTF-8</project.target.encoding>
-		<project.target.version>1.6</project.target.version>
+		
 		<project.aidai.version>1.0.0</project.aidai.version>
-
-		<javaxServletVersion>1.2</javaxServletVersion>
-
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<maven.version>3.0.3</maven.version>
+		
+		<project.source.version>1.5</project.source.version>
+		<project.target.encoding>UTF-8</project.target.encoding>
+		<project.target.version>${project.source.version}</project.target.version>
+		
+		<project.reporting.outputEncoding>${project.target.encoding}</project.reporting.outputEncoding>
+		<!-- release -->
 		<sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
-		<gpg.useagent>true</gpg.useagent>
+		<lastReleaseVersion>RELEASE</lastReleaseVersion>
+		<!-- gpg pass -->
+		<gpg.useagent>false</gpg.useagent>
+		<!-- add argument -->
+		<arguments />
+		
+		<!-- denpendency -->
+		<activemq-version>5.4.1</activemq-version>
+        <aries-version>0.3</aries-version>
+        <asm-version>1.5.3</asm-version>
+		<camel-version>2.4.0</camel-version>
+ 		<commons-dbcp-version>1.2.2</commons-dbcp-version>     
+        <commons-lang>2.4</commons-lang>
+        <commons-logging-version>1.1.1</commons-logging-version>
+        <derby-version>10.6.2.1</derby-version>
+        <cxf-version>2.2.6</cxf-version> 
+ 		<felix-version>2.0.1</felix-version>
+		<felix-osgi-version>1.2.0</felix-osgi-version>
+        <geronimo_jpa_spec-version>1.1.1</geronimo_jpa_spec-version>
+		<hibernate-version>3.3.1.GA</hibernate-version>
+        <hsqldb-version>1.8.0.10</hsqldb-version>
+        <jetty-version>6.1.22</jetty-version>
+		<jta-version>1.1</jta-version>
+        <junit-version>4.4</junit-version>
+		<log4j-version>1.2.14</log4j-version>
+		<mysql-version>5.1.6</mysql-version>
+        <openjpa-version>2.0.1</openjpa-version>
+        <servicemix-version>4.3.0</servicemix-version>
+		<spring-osgi-version>1.2.0</spring-osgi-version>
+       	<spring-version>3.0.3</spring-version>
+		<wicket-version>1.4.7</wicket-version>
+		
+		<slf4j.version>1.5.8</slf4j.version>
+		<slf4j-log4j12.version>1.4.2</slf4j-log4j12.version>
+		<log4j.version>1.2.14</log4j.version>
+		
+		<org.apache.felix.webconsole.version>3.1.8</org.apache.felix.webconsole.version>
+		<org.apache.felix.scr.version>1.6.0</org.apache.felix.scr.version>
+		<org.osgi.core.version>4.1.0</org.osgi.core.version>
+		<org.osgi.compendium.version>4.2.0</org.osgi.compendium.version>
+		<org.apache.felix.shell.version>1.0.0</org.apache.felix.shell.version>
+		<felix.org.osgi.core.version>1.0.0</felix.org.osgi.core.version>
+		<org.apache.felix.http.jetty.version>2.2.0</org.apache.felix.http.jetty.version>
+		<jetty.version>6.1.24</jetty.version>
+		<jetty-util.version>6.1.24</jetty-util.version>
+		<jetty-sslengine.version>6.1.24</jetty-sslengine.version>
+		<org.apache.felix.http.api.version>2.2.0</org.apache.felix.http.api.version>
+		<org.apache.felix.http.base.version>2.2.0</org.apache.felix.http.base.version>
+		<mortbay.jetty-servlet-api.version>2.5-20081211</mortbay.jetty-servlet-api.version>
+		
+		
+		<javassist.version>3.9.0.GA</javassist.version>
+		<persistence-jpa.version>1.0</persistence-jpa.version>
+		<activemq-camel.version>5.4.0</activemq-camel.version>
+		
+		<!-- <aspectj.version>1.6.5.RELEASE</aspectj.version>
+		<javaxServletVersion>1.2</javaxServletVersion>
 
 		<gemini.blueprint.version>1.0.2.RELEASE</gemini.blueprint.version>
 		<springframework.version>3.2.3.RELEASE</springframework.version>
@@ -36,7 +89,7 @@
 		<springsource.slf4j.version>1.6.1</springsource.slf4j.version>
 		<springsource.aopalliance.version>1.0.0</springsource.aopalliance.version>
 		<springsource.common.logging.version>1.1.1</springsource.common.logging.version>
-		<!-- struts2对json支持 -->
+		struts2对json支持
 		<struts2-core.version>2.2.1.1</struts2-core.version>
 		<struts2-json-plugin.version>2.2.1.1</struts2-json-plugin.version>
 
@@ -46,16 +99,12 @@
 		<exam.version>4.5.0</exam.version>
 		<url.version>2.2.0</url.version>
 
-		<slf4j.version>1.7.5</slf4j.version>
-
 		<mysql.connector.version>5.1.6</mysql.connector.version>
 		<common.dbcp.version>1.2.2.osgi</common.dbcp.version>
 
-		<!-- ibatis -->
-		<ibatis-sqlmap.version>2.3.4.726</ibatis-sqlmap.version>
+		ibatis
+		<ibatis-sqlmap.version>2.3.4.726</ibatis-sqlmap.version> -->
 
-		<arguments />
-		<!-- 后续去掉 -->
 		<!-- <java.home>F:/java/jdk1.7</java.home> -->
 
 		<!-- OSGi bundles properties -->
@@ -63,7 +112,6 @@
 		<aidai.osgi.import.before.defaults />
 		<aidai.osgi.import.additional />
 		<aidai.osgi.import.pkg>
-			org.apache.aries.*,
 			${aidai.osgi.import.before.defaults},
 			${aidai.osgi.import.defaults},
 			${aidai.osgi.import.additional},
@@ -71,8 +119,10 @@
 		</aidai.osgi.import.pkg>
 		<aidai.osgi.activator />
 		<aidai.osgi.failok>false</aidai.osgi.failok>
-		<!--This is the default (consumer policy) range - override in the pom if 
-			you need a provider range -->
+		<!--
+		   - This is the default (consumer policy) range 
+		   - override in the pom if you need a provider range 
+		-->
 		<aidai.osgi.import.default.version>[$(version;==;$(@)),$(version;+;$(@)))</aidai.osgi.import.default.version>
 		<aidai.osgi.private.pkg>${project.artifactId}*.impl</aidai.osgi.private.pkg>
 		<aidai.osgi.export>${aidai.osgi.export.pkg};-noimport:=true</aidai.osgi.export>
@@ -87,15 +137,512 @@
 		<aidai.osgi.exclude.dependencies>false</aidai.osgi.exclude.dependencies>
 		<aidai.osgi.remove.headers>Ignore-Package,Include-Resource,Private-Package,Bundle-DocURL</aidai.osgi.remove.headers>
 		<aidai.osgi.include.resource>{maven-resources}</aidai.osgi.include.resource>
-		<aries.javadoc.exclude.packages>${aidai.osgi.private.pkg}</aries.javadoc.exclude.packages>
-		<lastReleaseVersion>RELEASE</lastReleaseVersion>
-
+		<aidai.javadoc.exclude.packages>${aidai.osgi.private.pkg}</aidai.javadoc.exclude.packages>
+		
+		<!--plugin version -->
+		<maven-antrun-plugin.version>1.7</maven-antrun-plugin.version>
+		<maven-assembly-plugin.version>2.4</maven-assembly-plugin.version>
+		<maven-clean-plugin.version>2.5</maven-clean-plugin.version>
+		<maven-dependecy-plugin.version>2.8</maven-dependecy-plugin.version>
+		<maven-deploy-plugin.version>2.8.1</maven-deploy-plugin.version>
+		<maven-docck-plugin.version>1.0</maven-docck-plugin.version>
+		<maven-enforcer-plugin.version>1.3.1</maven-enforcer-plugin.version>
+		<maven-failsafe-plugin.version>2.16</maven-failsafe-plugin.version>
+		<maven-gpg-plugin.version>1.4</maven-gpg-plugin.version>
+		<maven-install-plugin.version>2.5.1</maven-install-plugin.version>
+		<maven-invoker-plugin.version>1.8</maven-invoker-plugin.version>
+		<maven-jar-plugin.version>2.4</maven-jar-plugin.version>
+		<maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
+		<maven-plugin-plugin.version>3.2</maven-plugin-plugin.version>
+		<maven-release-plugin.version>2.4.2</maven-release-plugin.version>
+		<maven-remote-resources-plugin.version>1.5</maven-remote-resources-plugin.version>
+		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+		<maven-scm-plugin.version>1.9</maven-scm-plugin.version>
+		<maven-scm-publish-plugin.version>1.0-beta-2</maven-scm-publish-plugin.version>
+		<maven-site-plugin.version>3.3</maven-site-plugin.version>
+		<maven-source-plugin.version>2.2.1</maven-source-plugin.version>
+		<clirr-maven-plugin.version>2.6.1</clirr-maven-plugin.version>
+		<m2e-lifecycle-mapping.version>1.0.0</m2e-lifecycle-mapping.version>
+		<maven-shade-plugin.version>1.2.2</maven-shade-plugin.version>
+		<versions-maven-plugin.version>1.1</versions-maven-plugin.version>
+		<findbugs-maven-plugin.version>2.3.1</findbugs-maven-plugin.version>
+		<maven-paxexam-plugin.version>1.2.3</maven-paxexam-plugin.version>
+		<maven-pax-plugin.version>1.4</maven-pax-plugin.version>
+		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+		<maven-bundle-plugin.version>2.5.0</maven-bundle-plugin.version>
+		<maven-pmd-plugin.version>2.4</maven-pmd-plugin.version>
+		<build-helper-maven-plugin.version>1.5</build-helper-maven-plugin.version>
+		<karaf-maven-plugin.version>4.0.0</karaf-maven-plugin.version>
+		<exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
+		<!-- maven plugin dependencies -->
+		<apache-source-release-assembly-descriptor.version>1.0.4</apache-source-release-assembly-descriptor.version>
+		<animal-sniffer-enforcer-rule.version>1.6</animal-sniffer-enforcer-rule.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-
+			<!-- aries -->
 			<dependency>
+	            <groupId>org.apache.aries.blueprint</groupId>
+	            <artifactId>org.apache.aries.blueprint</artifactId>
+	            <version>${aries-version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.aries.proxy</groupId>
+	            <artifactId>org.apache.aries.proxy</artifactId>
+	            <version>${aries-version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.apache.aries</groupId>
+	            <artifactId>org.apache.aries.util</artifactId>
+	            <version>${aries-version}</version>
+	        </dependency>
+			<!-- karaf runntime -->
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.webconsole</artifactId>
+				<version>${org.apache.felix.webconsole.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.scr</artifactId>
+				<version>${org.apache.felix.scr.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.core</artifactId>
+				<version>${org.osgi.core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.compendium</artifactId>
+				<version>${org.osgi.compendium.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.shell</artifactId>
+				<version>${org.apache.felix.shell.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.osgi.core</artifactId>
+				<version>${felix.org.osgi.core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.http.jetty</artifactId>
+				<version>${org.apache.felix.http.jetty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty</artifactId>
+				<version>${jetty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-util</artifactId>
+				<version>${jetty-util.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-sslengine</artifactId>
+				<version>${jetty-sslengine.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.http.api</artifactId>
+				<version>${org.apache.felix.http.api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.http.base</artifactId>
+				<version>${org.apache.felix.http.base.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${mortbay.jetty-servlet-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version><!-- todo -->
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-nop</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			
+			<!-- jpa -->
+			<dependency>
+	          <groupId>org.apache.geronimo.specs</groupId>
+	          <artifactId>geronimo-jpa_3.0_spec</artifactId>
+	          <version>${geronimo_jpa_spec-version}</version>
+	        </dependency>
+			<dependency>
+				<groupId>javax.transaction</groupId>
+				<artifactId>jta</artifactId>
+				<version>${jta-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>${commons-dbcp-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hsqldb</groupId>
+				<artifactId>hsqldb</artifactId>
+				<version>${hsqldb-version}</version>
+			</dependency>
+	        <dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-bindy</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons-lang}</version>
+			</dependency>
+			<!-- services -->
+			<dependency>
+				<groupId>org.apache.camel.example.reportincident</groupId>
+				<artifactId>persistence-jpa</artifactId>
+				<version>${persistence-jpa.version}</version>
+			</dependency>
+	
+			<!--  test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+		        <artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<!--
+			<dependency>
+			  <groupId>javassist</groupId>
+	          <artifactId>javassist</artifactId>
+	  		  <version>${javassist.version}</version>
+			  <scope>test</scope>
+			</dependency>
+			-->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+		        <artifactId>slf4j-simple</artifactId>
+				<version>${slf4j.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.osgi</groupId>
+				<artifactId>spring-osgi-core</artifactId>
+				<version>${spring-osgi-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.framework</artifactId>
+				<version>${felix-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>asm</groupId>
+				<artifactId>asm</artifactId>
+				<version>${asm-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.transaction</groupId>
+				<artifactId>jta</artifactId>
+				<version>${jta-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>${commons-dbcp-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql-version}</version>
+			    <scope>test</scope>
+			</dependency>
+			
+			<!-- route -->
+			<dependency>
+				<groupId>org.apache.camel.example.reportincident</groupId>
+				<artifactId>service</artifactId>
+				<version>${pom.version}</version>
+			</dependency>
+		    <dependency>
+				<groupId>org.apache.camel.example.reportincident</groupId>
+				<artifactId>webservice</artifactId>
+				<version>${pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel.example.reportincident</groupId>
+				<artifactId>persistence-jpa</artifactId>
+				<version>${pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-core</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-bindy</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-bundle</artifactId>
+				<version>${cxf-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-common-utilities</artifactId>
+				<version>${cxf-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-cxf</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-jms</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+		    <dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-camel</artifactId>
+				<!-- <version>${activemq-version}</version> -->
+				<version>${activemq-camel.version}</version>
+			</dependency>
+		    <dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-core</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.osgi.core</artifactId>
+				<version>${felix-osgi-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j-version}</version>
+			</dependency>
+			<dependency>
+	            <groupId>org.springframework</groupId>
+	            <artifactId>spring-beans</artifactId>
+	            <version>${spring-version}</version>
+	        </dependency>
+			<dependency>
+	            <groupId>org.springframework</groupId>
+	            <artifactId>spring-jms</artifactId>
+	            <version>${spring-version}</version>
+	        </dependency>
+			
+			<!-- Test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+	            <groupId>org.apache.camel</groupId>
+	            <artifactId>camel-core</artifactId>
+	            <version>${camel-version}</version>
+	            <type>test-jar</type>
+	            <scope>test</scope>
+	        </dependency>
+	        <dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring</artifactId>
+				<version>${camel-version}</version>
+				<!-- <scope>test</scope>  -->
+			</dependency>
+	        <dependency>
+	            <groupId>org.springframework</groupId>
+	            <artifactId>spring-test</artifactId>
+	            <version>${spring-version}</version>
+	            <scope>test</scope>
+	        </dependency>
+	        
+	        <!-- web -->
+	        <dependency>
+				<groupId>org.apache.camel.example.reportincident</groupId>
+				<artifactId>service</artifactId>
+				<version>${pom.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel.example.reportincident</groupId>
+				<artifactId>persistence-jpa</artifactId>
+				<version>${pom.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<!-- SPRING DEPENDENCIES -->
+		    <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring-version}</version>
+				<scope>provided</scope>
+			</dependency>
+		    <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- 
+		    <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			 -->
+			<!--  WICKET DEPENDENCIES -->
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket</artifactId>
+				<version>${wicket-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-ioc</artifactId>
+				<version>${wicket-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- Only for Wicket << 1.4.x
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-spring-annot</artifactId>
+				<version>${wicket-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			-->
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-spring</artifactId>
+				<version>${wicket-version}</version>
+				<scope>provided</scope>
+			</dependency>
+	        <dependency>
+	            <groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-extensions</artifactId>
+				<version>${wicket-version}</version>
+				<scope>provided</scope>
+			</dependency>
+	
+			<!-- LOGGING DEPENDENCIES - LOG4J -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j-log4j12.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+				<scope>test</scope>
+			</dependency>
+	
+			<!--  JUNIT DEPENDENCY FOR TESTING -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit-version}</version>
+				<scope>test</scope>
+			</dependency>
+	
+			<!--  JETTY DEPENDENCIES FOR TESTING  -->
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty</artifactId>
+				<version>${jetty-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-util</artifactId>
+				<version>${jetty-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-management</artifactId>
+				<version>${jetty-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			
+			<!-- web service -->
+			<!-- cxf -->
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-core</artifactId>
+				<version>${cxf-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-frontend-jaxws</artifactId>
+				<version>${cxf-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-transports-http</artifactId>
+				<version>${cxf-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-frontend-simple</artifactId>
+				<version>${cxf-version}</version>
+			</dependency>
+			
+			
+			
+			
+			<!-- <dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>jstl</artifactId>
 				<version>1.2</version>
@@ -114,8 +661,8 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.8.1</version>
-			</dependency>
-			<dependency>
+			</dependency> -->
+			<!-- <dependency>
 				<groupId>org.ops4j.pax.logging</groupId>
 				<artifactId>pax-logging-api</artifactId>
 				<version>${paxLoggingApiVersion}</version>
@@ -154,7 +701,7 @@
 				<version>4.3.1</version>
 			</dependency>
 
-			<!-- External project dependencies -->
+			External project dependencies
 			<dependency>
 				<groupId>asm</groupId>
 				<artifactId>asm-all</artifactId>
@@ -255,7 +802,7 @@
 				<artifactId>serp</artifactId>
 				<version>${serpVersion}</version>
 			</dependency>
-			<!-- mysql -->
+			mysql
 			<dependency>
 				<groupId>com.mysql.jdbc</groupId>
 				<artifactId>com.springsource.com.mysql.jdbc</artifactId>
@@ -281,14 +828,14 @@
 				<scope>provided</scope>
 			</dependency>
 
-			<!-- ibatis -->
+			ibatis
 			<dependency>
 				<groupId>org.apache.ibatis</groupId>
 				<artifactId>com.springsource.com.ibatis</artifactId>
 				<version>2.3.4.726</version>
 			</dependency>
 
-			<!-- pax dependecies -->
+			pax dependecies
 			<dependency>
 				<groupId>org.ops4j.pax.exam</groupId>
 				<artifactId>pax-exam</artifactId>
@@ -417,7 +964,7 @@
 				<version>2.7.6</version>
 			</dependency>
 
-			<!-- gemini blueprint -->
+			gemini blueprint
 			<dependency>
 				<groupId>org.eclipse.gemini</groupId>
 				<artifactId>org.eclipse.gemini.blueprint.core</artifactId>
@@ -434,7 +981,7 @@
 				<version>${gemini.blueprint.version}</version>
 			</dependency>
 
-			<!-- springframework bundles -->
+			springframework bundles
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>org.springframework.aop</artifactId>
@@ -460,7 +1007,7 @@
 				<artifactId>org.springframework.web</artifactId>
 				<version>${springframework.version}</version>
 			</dependency>
-			<!--其他 Springframework 的 Bundles -->
+			其他 Springframework 的 Bundles
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>org.springframework.orm</artifactId>
@@ -522,7 +1069,7 @@
 				<artifactId>com.springsource.slf4j.nop</artifactId>
 				<version>${springsource.slf4j.version}</version>
 			</dependency>
-			<!-- 如果用到Struts就需要这个Bundle -->
+			如果用到Struts就需要这个Bundle
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>org.springframework.web.struts</artifactId>
@@ -534,44 +1081,50 @@
 				<artifactId>com.springsource.freemarker</artifactId>
 				<version>2.3.12</version>
 			</dependency>
-			<!-- Springframework 依赖的 Bundles -->
+			Springframework 依赖的 Bundles
 			<dependency>
 				<groupId>org.aopalliance</groupId>
 				<artifactId>com.springsource.org.aopalliance</artifactId>
 				<version>${springsource.aopalliance.version}</version>
 			</dependency>
-			<!-- <dependency>
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>com.springsource.org.junit</artifactId>
+				<version>4.7.0</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
 			    <groupId>org.springframework</groupId>
 			    <artifactId>org.springframework.spring-library</artifactId>
 			    <type>libd</type>
 			    <version>${springframework.version}</version>
-			</dependency> -->
+			</dependency>
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>aspectjweaver</artifactId>
-				<version>1.6.1</version>
+				<version>1.6.5</version>
 			</dependency>
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>com.springsource.org.aspectj.runtime</artifactId>
-				<version>1.6.1</version>
+				<version>${aspectj.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>com.springsource.org.aspectj.weaver</artifactId>
-				<version>1.6.1</version>
+				<version>${aspectj.version}</version>
 			</dependency>
-			<dependency><!-- dependency by: javax.xml.ws -->
+			<dependency>dependency by: javax.xml.ws
 				<groupId>javax.xml.bind</groupId>
 				<artifactId>com.springsource.javax.xml.bind</artifactId>
 				<version>2.1.7</version>
 			</dependency>
-			<dependency><!-- dependency by: javax.xml.bind -->
+			<dependency>dependency by: javax.xml.bind
 				<groupId>javax.xml.stream</groupId>
 				<artifactId>com.springsource.javax.xml.stream</artifactId>
 				<version>1.0.1</version>
 			</dependency>
-			<!-- JSP及相关的Bundle -->
+			JSP及相关的Bundle
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>com.springsource.javax.servlet.jsp</artifactId>
@@ -587,7 +1140,7 @@
 				<artifactId>com.springsource.org.apache.taglibs.standard</artifactId>
 				<version>1.1.2</version>
 			</dependency>
-			<!-- STRUTS -->
+			STRUTS
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>com.springsource.org.apache.commons.fileupload</artifactId>
@@ -598,20 +1151,20 @@
 				<artifactId>com.springsource.org.apache.commons.validator</artifactId>
 				<version>1.1.4</version>
 			</dependency>
-			<!-- com.springsource.org.apache.commons.fileupload 依赖的Bundle -->
+			com.springsource.org.apache.commons.fileupload 依赖的Bundle
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>com.springsource.org.apache.commons.io</artifactId>
 				<version>1.4.0</version>
 			</dependency>
-			<!-- com.springsource.org.apache.commons.validator 依赖的Bundle -->
+			com.springsource.org.apache.commons.validator 依赖的Bundle
 			<dependency>
 				<groupId>org.apache.oro</groupId>
 				<artifactId>com.springsource.org.apache.oro</artifactId>
 				<version>2.0.8</version>
 			</dependency>
 			
-			<!-- spring osgi -->
+			spring osgi
 			<dependency>
 			    <groupId>org.springframework.osgi</groupId>
 			    <artifactId>org.springframework.osgi.core</artifactId>
@@ -653,7 +1206,7 @@
 			    <version>${spring.osgi.version}</version>
 			</dependency>
 
-			<!-- project dependencies -->
+			project dependencies
 			<dependency>
 				<groupId>com.aidai</groupId>
 				<artifactId>com.aidai.utils</artifactId>
@@ -719,22 +1272,25 @@
 				<artifactId>com.aidai.test</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			<!-- <dependency> <groupId>com.aidai</groupId> <artifactId>com.aidai.client</artifactId> 
-				<version>${project.version}</version> </dependency> -->
-			<!-- project dependecies end -->
+			<dependency> <groupId>com.aidai</groupId> <artifactId>com.aidai.client</artifactId> 
+				<version>${project.version}</version> </dependency>
+			project dependecies end
 			<dependency>
 				<groupId>org.apache.struts</groupId>
 				<artifactId>struts2-json-plugin</artifactId>
 				<version>${struts2-json-plugin.version}</version>
 				<type>jar</type>
-			</dependency>
+			</dependency> -->
 		</dependencies>
 	</dependencyManagement>
 
 	<modules>
+		<module>poms</module>
+		<module>provision</module>
 		<module>modules</module>
 		<module>assembles</module>
 	</modules>
+	
 	<build>
 		<defaultGoal>install</defaultGoal>
 
@@ -778,68 +1334,55 @@
 			</testResource>
 		</testResources>
 
-
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-antrun-plugin</artifactId>
-					<version>1.7</version>
+					<version>${maven-antrun-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>2.4</version>
+					<version>${maven-assembly-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-clean-plugin</artifactId>
-					<version>2.5</version>
+					<version>${maven-clean-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.8</version>
+					<version>${maven-dependecy-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.1</version>
+					<version>${maven-deploy-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-docck-plugin</artifactId>
-					<version>1.0</version>
+					<version>${maven-docck-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>1.3.1</version>
+					<version>${maven-enforcer-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>2.16</version>
+					<version>${maven-failsafe-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-gpg-plugin</artifactId>
-					<version>1.4</version>
+					<version>${maven-gpg-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
-					<version>2.5.1</version>
+					<version>${maven-install-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-invoker-plugin</artifactId>
-					<version>1.8</version>
+					<version>${maven-invoker-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>2.4</version>
+					<version>${maven-jar-plugin.version}</version>
 					<configuration>
 						<archive>
 							<manifest>
@@ -850,19 +1393,16 @@
 					</configuration>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.9.1</version>
+					<version>${maven-javadoc-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-plugin-plugin</artifactId>
-					<version>3.2</version>
+					<version>${maven-plugin-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
-					<version>2.4.2</version>
+					<version>${maven-release-plugin.version}</version>
 					<configuration>
 						<useReleaseProfile>false</useReleaseProfile>
 						<goals>deploy</goals>
@@ -870,189 +1410,106 @@
 					</configuration>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-remote-resources-plugin</artifactId>
-					<version>1.5</version>
+					<version>${maven-remote-resources-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.6</version>
+					<version>${maven-resources-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-scm-plugin</artifactId>
-					<version>1.9</version>
+					<version>${maven-scm-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-scm-publish-plugin</artifactId>
-					<version>1.0-beta-2</version>
+					<version>${maven-scm-publish-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.3</version>
+					<version>${maven-site-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>2.2.1</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.rat</groupId>
-					<artifactId>apache-rat-plugin</artifactId>
-					<version>0.10</version>
+					<version>${maven-source-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>clirr-maven-plugin</artifactId>
-					<version>2.6.1</version>
+					<version>${clirr-maven-plugin.version}</version>
 				</plugin>
-
-				<!--TODO TEXT. This plugin's configuration is used in m2e only. -->
+				<!--This plugin's configuration is used in m2e only. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.servicemix.tooling
-										</groupId>
-										<artifactId>
-											depends-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.2,)
-										</versionRange>
-										<goals>
-											<goal>
-												generate-depends-file
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.maven.plugins
-										</groupId>
-										<artifactId>
-											maven-antrun-plugin
-										</artifactId>
-										<versionRange>
-											[1.2,)
-										</versionRange>
-										<goals>
-											<goal>run</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.codehaus.mojo
-										</groupId>
-										<artifactId>
-											properties-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.0-alpha-2,)
-										</versionRange>
-										<goals>
-											<goal>
-												read-project-properties
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.ops4j.pax.exam
-										</groupId>
-										<artifactId>
-											maven-paxexam-plugin
-										</artifactId>
-										<versionRange>
-											[1.2.3,)
-										</versionRange>
-										<goals>
-											<goal>
-												generate-depends-file
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
+					<version>${m2e-lifecycle-mapping.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-shade-plugin</artifactId>
-					<version>1.2.2</version>
+					<version>${maven-shade-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
-					<version>1.1</version>
-					<configuration>
-						<excludes>
-							<!-- 3.5.0.v20090520 < 3.3.0-v20070530 -->
-							<exclude>org.eclipse:osgi</exclude>
-							<!-- 2.0.0-SNAPSHOT < 2.0.0-beta -->
-							<exclude>org.apache.openjpa:openjpa</exclude>
-							<!-- maven 3.0 components don't work with 2.0 -->
-							<exclude>org.apache.maven:maven-plugin-api</exclude>
-							<exclude>org.apache.maven:maven-project</exclude>
-							<exclude>org.apache.maven:maven-artifact</exclude>
-							<exclude>org.apache.maven:maven-archiver</exclude>
-						</excludes>
-					</configuration>
+					<version>${versions-maven-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>findbugs-maven-plugin</artifactId>
-					<version>2.3.1</version>
+					<version>${findbugs-maven-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.ops4j.pax.exam</groupId>
 					<artifactId>maven-paxexam-plugin</artifactId>
-					<version>1.2.3</version>
+					<version>${maven-paxexam-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.ops4j</groupId>
+					<artifactId>maven-pax-plugin</artifactId>
+					<version>${maven-pax-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<version>${maven-bundle-plugin.version}</version>
+				</plugin>
+				<plugin>  
+	                <groupId>org.apache.karaf.tooling</groupId>  
+	                <artifactId>karaf-maven-plugin</artifactId>
+	                <version>${karaf-maven-plugin.version}</version>
+	            </plugin>
+	            <plugin>  
+	                <groupId>org.codehaus.mojo</groupId>  
+	                <artifactId>exec-maven-plugin</artifactId>
+					<version>${exec-maven-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>${build-helper-maven-plugin.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		
 		<plugins>
-
 			<plugin>
 				<groupId>org.ops4j</groupId>
 				<artifactId>maven-pax-plugin</artifactId>
-				<version>1.4</version>
 				<configuration>
-					<framework>felix</framework>
+					<provision>
+						<!-- equinox -->
+						<param>--platform=felix</param>
+						<param>--vmOptions=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000</param>
+					</provision>
 				</configuration>
 			</plugin>
 
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
 				<configuration>
 					<optimize>true</optimize>
 					<debug>true</debug>
@@ -1060,10 +1517,25 @@
 					<showWarnings>true</showWarnings>
 					<source>${project.source.version}</source>
 					<target>${project.target.version}</target>
-					<encoding>${project.build.sourceEncoding}</encoding>
+					<encoding>${project.target.encoding}</encoding>
 					<scope>system</scope>
 					<excludes>
 						<exclude>**/*.svn</exclude>
+						<exclude>**/*.git</exclude>
+						<exclude>**/target/**/*</exclude>
+						<exclude>**/appended-resources/**/*</exclude>
+						<exclude>**/dependency-reduced-pom.xml</exclude>
+						<exclude>**/velocity.log</exclude>
+						<exclude>**/DEPENDENCIES</exclude>
+						<!-- exclude Eclipse IDE generated files -->
+						<exclude>**/.project</exclude>
+						<exclude>**/.classpath</exclude>
+						<exclude>**/eclipse-classes/**/*</exclude>
+						<exclude>**/APPLICATION.MF</exclude>
+						<exclude>**/MANIFEST.MF</exclude>
+						<exclude>**/*.MF</exclude>
+						<exclude>**/runner/**</exclude>
+						<exclude>**/.settings/**</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -1075,84 +1547,70 @@
 					<dependency>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>animal-sniffer-enforcer-rule</artifactId>
-						<version>1.6</version>
+						<version>${animal-sniffer-enforcer-rule.version}</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+					 <rules>  
+		                <requireMavenVersion>  
+		                  <version>${maven.version}</version>
+		                </requireMavenVersion>  
+		                <requireJavaVersion>  
+		                  <version>${project.source.version}</version>  
+		                </requireJavaVersion>  
+		                <requireOS>  
+		                  <family>windows</family>  
+		                </requireOS>  
+		              </rules>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.5.0</version>
-				<extensions>true</extensions>
-				<inherited>true</inherited>
-				<configuration>
-					<excludeDependencies>${aidai.osgi.exclude.dependencies}</excludeDependencies>
-					<instructions>
-						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-SymbolicName>${aidai.osgi.symbolic.name}</Bundle-SymbolicName>
-						<Bundle-Activator>${aidai.osgi.activator}</Bundle-Activator>
-						<Export-Package>${aidai.osgi.export}</Export-Package>
-						<Import-Package>${aidai.osgi.import}</Import-Package>
-						<DynamicImport-Package>${aidai.osgi.dynamic}</DynamicImport-Package>
-						<Private-Package>${aidai.osgi.private.pkg}</Private-Package>
-						<Implementation-Title>Apache Aries</Implementation-Title>
-						<Implementation-Version>${project.version}</Implementation-Version>
-						<Bundle-Vendor>The Apache Software Foundation</Bundle-Vendor>
-						<Include-Resource>${aidai.osgi.include.resource}</Include-Resource>
-						<_removeheaders>${aidai.osgi.remove.headers}}</_removeheaders>
-						<_failok>${aidai.osgi.failok}</_failok>
-						<_consumer-policy>${aidai.osgi.import.default.version}</_consumer-policy>
-						<_provider-policy>$&lt;range;[==,=+)&gt;</_provider-policy>
-						<Export-Service>${aidai.osgi.export.service}</Export-Service>
-						<Import-Service>${aidai.osgi.import.service}</Import-Service>
-					</instructions>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<configuration>
-					<source>1.7</source>
+					<source>${project.source.version}</source>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<!-- 3.5.0.v20090520 < 3.3.0-v20070530 -->
+						<exclude>org.eclipse:osgi</exclude>
+						<!-- 2.0.0-SNAPSHOT < 2.0.0-beta -->
+						<exclude>org.apache.openjpa:openjpa</exclude>
+						<!-- maven 3.0 components don't work with 2.0 -->
+						<exclude>org.apache.maven:maven-plugin-api</exclude>
+						<exclude>org.apache.maven:maven-project</exclude>
+						<exclude>org.apache.maven:maven-artifact</exclude>
+						<exclude>org.apache.maven:maven-archiver</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			
 		</plugins>
 	</build>
 
 	<profiles>
 		<profile>
-			<id>aidai-release</id>
+			<id>aidai-profile</id>
+			<activation>
+				<property>
+					<name>enforce</name>
+					<value>strict</value>
+				</property>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			
 			<build>
 				<plugins>
-					<plugin>
-						<artifactId>maven-assembly-plugin</artifactId>
-						<dependencies>
-							<dependency>
-								<groupId>org.apache.apache.resources</groupId>
-								<artifactId>apache-source-release-assembly-descriptor</artifactId>
-								<version>1.0.4</version>
-							</dependency>
-						</dependencies>
-						<executions>
-							<execution>
-								<id>source-release-assembly</id>
-								<phase>package</phase>
-								<goals>
-									<goal>single</goal>
-								</goals>
-								<configuration>
-									<runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
-									<descriptorRefs>
-										<descriptorRef>${sourceReleaseAssemblyDescriptor}</descriptorRef>
-									</descriptorRefs>
-									<tarLongFileMode>gnu</tarLongFileMode>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
+					
 					<!-- We want to deploy the artifact to a staging location for perusal -->
 					<plugin>
 						<inherited>true</inherited>
@@ -1191,41 +1649,19 @@
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
 						<configuration>
+							<!-- need to input,the password will be validate when other use  -->
 							<passphrase>${gpg.passphrase}</passphrase>
 							<useAgent>${gpg.useagent}</useAgent>
 						</configuration>
 						<executions>
 							<execution>
 								<goals>
-									<goal>sign</goal>
+									<!-- <goal>sign</goal> -->
 								</goals>
 							</execution>
 						</executions>
 					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-		<profile>
-			<id>maven-3</id>
-			<activation>
-				<file>
-					<!-- This employs that the basedir expression is only recognized by 
-						Maven 3.x (see MNG-2363) -->
-					<exists>${basedir}</exists>
-				</file>
-			</activation>
-			<build>
-				<pluginManagement>
-					<plugins>
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-scm-publish-plugin</artifactId>
-							<version>1.0</version>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-				<plugins>
+					
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-site-plugin</artifactId>
@@ -1238,22 +1674,8 @@
 							</execution>
 						</executions>
 					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-		<profile>
-			<id>strict-enforcement</id>
-			<activation>
-				<property>
-					<name>enforce</name>
-					<value>strict</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
+					
 					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-enforcer-plugin</artifactId>
 						<executions>
 							<execution>
@@ -1263,93 +1685,17 @@
 								<configuration>
 									<rules>
 										<requirePluginVersions>
-											<banLatest>true</banLatest>
-											<banRelease>true</banRelease>
-											<banSnapshots>true</banSnapshots>
-											<banTimestamps>true</banTimestamps>
+											<banLatest>false</banLatest>
+											<banRelease>false</banRelease>
+											<banSnapshots>false</banSnapshots>
+											<banTimestamps>false</banTimestamps>
 										</requirePluginVersions>
 										<requireReleaseDeps>
 											<searchTransitive>true</searchTransitive>
 										</requireReleaseDeps>
 									</rules>
-									<fail>true</fail>
+									<fail>false</fail>
 								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>rat</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.rat</groupId>
-						<artifactId>apache-rat-plugin</artifactId>
-						<version>0.6</version>
-						<executions>
-							<execution>
-								<phase>verify</phase>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<reportFile>${project.build.directory}/${project.build.finalName}.rat</reportFile>
-							<excludeSubProjects>false</excludeSubProjects>
-							<excludes>
-								<exclude>**/target/**/*</exclude>
-								<exclude>**/appended-resources/**/*</exclude>
-								<exclude>**/dependency-reduced-pom.xml</exclude>
-								<exclude>**/velocity.log</exclude>
-								<exclude>**/DEPENDENCIES</exclude>
-								<!-- exclude Eclipse IDE generated files -->
-								<exclude>**/.project</exclude>
-								<exclude>**/.classpath</exclude>
-								<exclude>**/eclipse-classes/**/*</exclude>
-								<!-- manifest files don't support comments so don't contain the ASL2.0 
-									header -->
-								<exclude>**/APPLICATION.MF</exclude>
-								<exclude>**/MANIFEST.MF</exclude>
-								<exclude>**/*.MF</exclude>
-								<!--RAT doesn't seem to recognize MIT style licenses -->
-								<exclude>manual/src/styles/print.css</exclude>
-								<!-- RAT doesn't recognize BSD license in transaction-manager logger -->
-								<exclude>**/objectweb/howl/log/Logger.java</exclude>
-							</excludes>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>license-check</id>
-			<pluginRepositories>
-				<pluginRepository>
-					<id>mc-release</id>
-					<url>http://mc-repo.googlecode.com/svn/maven2/releases</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-					<releases>
-						<enabled>true</enabled>
-					</releases>
-				</pluginRepository>
-			</pluginRepositories>
-			<build>
-				<defaultGoal>license:check</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>com.google.code.maven-license-plugin</groupId>
-						<artifactId>maven-license-plugin</artifactId>
-						<version>1.4.0</version>
-						<executions>
-							<execution>
-								<goals>
-									<goal>check</goal>
-								</goals>
 							</execution>
 						</executions>
 					</plugin>
@@ -1363,7 +1709,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.7</version>
+				<version>${maven-javadoc-plugin.version}</version>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -1374,9 +1720,9 @@
 					</reportSet>
 				</reportSets>
 				<configuration>
-					<excludePackageNames>${aries.javadoc.exclude.packages}</excludePackageNames>
+					<excludePackageNames>${aidai.javadoc.exclude.packages}</excludePackageNames>
 					<quiet>true</quiet>
-					<source>1.7</source>
+					<source>${project.target.encoding}</source>
 					<links>
 						<link>http://java.sun.com/j2se/1.7.0/docs/api</link>
 						<link>http://www.osgi.org/javadoc/r4v43/</link>
@@ -1436,20 +1782,147 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>2.3.1</version>
+				<version>${findbugs-maven-plugin.version}</version>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<version>2.4</version>
+				<version>${maven-pmd-plugin.version}</version>
 				<configuration>
-					<targetJdk>1.7</targetJdk>
+					<targetJdk>project.target.version</targetJdk>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.eclipse.m2e</groupId>
+				<artifactId>lifecycle-mapping</artifactId>
+				<version>${m2e-lifecycle-mapping.version}</version>
+				<configuration>
+					<lifecycleMappingMetadata>
+						<pluginExecutions>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.apache.servicemix.tooling
+									</groupId>
+									<artifactId>
+										depends-maven-plugin
+									</artifactId>
+									<versionRange>
+										[1.2,)
+									</versionRange>
+									<goals>
+										<goal>
+											generate-depends-file
+										</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.apache.maven.plugins
+									</groupId>
+									<artifactId>
+										maven-antrun-plugin
+									</artifactId>
+									<versionRange>
+										[1.2,)
+									</versionRange>
+									<goals>
+										<goal>run</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.codehaus.mojo
+									</groupId>
+									<artifactId>
+										properties-maven-plugin
+									</artifactId>
+									<versionRange>
+										[1.0-alpha-2,)
+									</versionRange>
+									<goals>
+										<goal>
+											read-project-properties
+										</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>
+										org.ops4j.pax.exam
+									</groupId>
+									<artifactId>
+										maven-paxexam-plugin
+									</artifactId>
+									<versionRange>
+										[1.2.3,)
+									</versionRange>
+									<goals>
+										<goal>
+											generate-depends-file
+										</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+						</pluginExecutions>
+					</lifecycleMappingMetadata>
 				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>
 
 	<repositories>
+		<repository>
+			<id>repo1</id>
+			<name>repo1</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+		<repository>  
+			<id>java</id>  
+			<name>java official repository</name>  
+			<url>http://mirrors.ibiblio.org/pub/mirrors/maven/mule/dependencies/maven2</url>  
+		</repository> 
+    	<repository>
+    		<id>mvn</id>
+    		<name>mvn</name>
+    		<url>http://mvnrepository.com</url>
+    	</repository>
+		<repository>
+			<id>maven2</id>
+			<url>http://repo1.maven.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>spring-release</id>
+			<name>Spring Portfolio Release Repository</name>
+			<url>http://maven.springframework.org/release</url>
+		</repository>
+		<repository>
+			<id>i21-s3-osgi-repo</id>
+			<name>i21 osgi artifacts repo</name>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+			<url>http://maven.springframework.org/osgi</url>
+		</repository> 
 		<repository>
 			<id>EclipseLink Repo</id>
 			<url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
@@ -1494,6 +1967,11 @@
 			<id>com.springsource.repository.libraries.snapshot</id>
 			<name>SpringSource Enterprise Bundle Repository - Snapshot Library Releases</name>
 			<url>http://repository.springsource.com/maven/libraries/snapshot</url>
+		</repository>
+		<repository>
+			<id>camel</id>
+			<name>camel</name>
+			<url>https://repository.apache.org/content/repositories/releases/org/apache/camel/apache-camel/</url>
 		</repository>
 	</repositories>
 

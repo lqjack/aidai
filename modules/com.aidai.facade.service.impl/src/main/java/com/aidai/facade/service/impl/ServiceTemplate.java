@@ -7,12 +7,11 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aidai.dao.BaseDao;
+import com.aidai.dao.DaoException;
+import com.aidai.dao.Page;
+import com.aidai.service.ServiceException;
 import com.aidai.utils.GenericsUtils;
-
-import frame.service.ServiceException;
-import framework.generic.dao.BaseDao;
-import framework.generic.dao.DaoException;
-import framework.generic.dao.Page;
 
 public abstract class ServiceTemplate<T, F> {
 	

@@ -13,8 +13,8 @@ package com.aidai.facade.service.impl;
 
 import java.io.Serializable;
 
-import frame.service.BaseService;
-import frame.service.ServiceException;
+import com.aidai.service.BaseService;
+import com.aidai.service.ServiceException;
 
 /** 
  * @ClassName: BaseServiceImpl 
